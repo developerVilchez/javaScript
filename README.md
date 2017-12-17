@@ -4,7 +4,7 @@
 
 Allows iteration. Repeat an action for a number of times.
 
-###While Loops:
+### While Loops:
 
 Example:
 Count up to a 100 monkeys 🐒
