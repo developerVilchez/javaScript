@@ -100,3 +100,38 @@ Three main parts for a loop:
 * How to get to next item `i = i + 1 `
 
 ### Nested Loops
+
+One or more loops can be nested inside of other loop.
+
+The First/Main loop will triger the loop, then the nested one will loop until the condition is not longer true, stops, to go back to the main loop, that will trigger the nested ones everytime, until its condiction it is no longer true.
+
+example:
+```javascript
+for (var x = 0; x < 4; x = x + 1) {
+  for (var y = 0; y < 3; y = y + 1) {
+    console.log(x + "," + y);
+  }
+}
+```
+that will print:
+> 0, 0 <br>
+> 0, 1 <br>
+> 0, 2 <br>
+> 1, 0 <br>
+> 1, 1 <br>
+> 1, 2 <br>
+> 2, 0 <br>
+> 2, 1 <br>
+> 2, 2 <br>
+> 3, 0 <br>
+> 3, 1 <br>
+> 3, 2 <br>
+
+#### Increment and decrement 
+
+> x++ or ++x // same as x = x + 1 <br>
+> x-- or --x // same as x = x - 1 <br>
+> x += 3 // same as x = x + 3 <br>
+> x -= 6 // same as x = x - 6 <br>
+> x *= 2 // same as x = x * 2 <br>
+> x /= 5 // same as x = x / 5 <br>
