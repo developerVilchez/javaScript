@@ -135,3 +135,10 @@ that will print:
 > x -= 6 // same as x = x - 6 <br>
 > x *= 2 // same as x = x * 2 <br>
 > x /= 5 // same as x = x / 5 <br>
+
+
+
+
+Source of the materials:
+* MDN
+* Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
