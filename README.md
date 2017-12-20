@@ -138,7 +138,8 @@ that will print:
 
 ## Functions
 
-allow you to put code that you can use & reuse.
+allow you to put code that you can use & reuse,
+package up code so you can easily use (and reuse) a block of code. 
 
 One parameter, in this case numIngridients:
 ```javascript
@@ -179,12 +180,17 @@ function sayHello() {
 ### Run a function
 
 Up to here we only have declare the functions.
-For the function to do something, we have to invoke or call the function using the function name, followed by parentheses with any arguments that are passed into it, if it has any.
+For the function to do something, we have to invoke or call the function using the function name, 
+followed by parentheses with any arguments that are passed into it, if it has any.
 `cookChiken(6); or doubleAction(look, jump); or sayHello()`
 
 ### Parameters vs. Arguments
 
-A parameter is always going to be a variable name and appears in the function declaration. On the other hand, an argument is always going to be a value (i.e. any of the JavaScript data types - a number, a string, a boolean, etc.) and will always appear in the code when the function is called or invoked.
+Parameters are always variables name and appears in the function declaration, that are used to store the data that's passed into a function for the function to use.
+Arguments are always going to be a value, the actual data (i.e. any of the JavaScript data types - a number, a string, a boolean, etc.) and will always appear in the code when the function is called or invoked.
+
+ 
+
 
 
 
