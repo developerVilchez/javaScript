@@ -136,6 +136,48 @@ that will print:
 > x *= 2 // same as x = x * 2 <br>
 > x /= 5 // same as x = x / 5 <br>
 
+## Functions
+
+allow you to put code that you can use & reuse.
+
+One parameter, in this case numIngridients:
+```javascript
+function cookChiken(numIngridients) {
+  // code to do something here
+}
+```
+
+More parameters, in this case action1 & action2:
+```javascript
+function doubleAction(action1, action2) {
+  // code here
+}
+```
+
+No parameters, empty:
+```javascript
+function sayHello() {
+  var message = "Hello!"
+  console.log(message);
+}
+```
+
+### Print function
+using console.log, like the example above.
+
+### Return function
+Return statement:
+```javascript
+function sayHello() {
+  var message = "Hello!"
+  return message; // returns value instead of printing it
+}
+```
+
+### Run a function
+
+### Parameters vs. Arguments
+
 
 
 
