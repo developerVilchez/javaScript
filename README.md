@@ -165,7 +165,9 @@ function sayHello() {
 
 ### Print function
 
-using console.log, like the example above.
+using console.log, like the example above, only displays a value.
+good to test code, get feedback and debugging purposes.
+`console.log` to test your code in the JavaScript console, just that.
 
 ### Return function
 
@@ -176,6 +178,7 @@ function sayHello() {
   return message; // returns value instead of printing it
 }
 ```
+Stops the execution of the function.
 
 ### Run a function
 
@@ -186,8 +189,8 @@ followed by parentheses with any arguments that are passed into it, if it has an
 
 ### Parameters vs. Arguments
 
-Parameters are always variables name and appears in the function declaration, that are used to store the data that's passed into a function for the function to use.
-Arguments are always going to be a value, the actual data (i.e. any of the JavaScript data types - a number, a string, a boolean, etc.) and will always appear in the code when the function is called or invoked.
+**Parameters** are always variables name and appears in the function declaration, that are used to store the data that's passed into a function for the function to use. <br>
+**Arguments** are always going to be a value, the actual data (i.e. any of the JavaScript data types - a number, a string, a boolean, etc.) and will always appear in the code when the function is called or invoked.
 
  
 
