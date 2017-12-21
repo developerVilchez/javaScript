@@ -192,8 +192,50 @@ followed by parentheses with any arguments that are passed into it, if it has an
 **Parameters** are always variables name and appears in the function declaration, that are used to store the data that's passed into a function for the function to use. <br>
 **Arguments** are always going to be a value, the actual data (i.e. any of the JavaScript data types - a number, a string, a boolean, etc.) and will always appear in the code when the function is called or invoked.
 
- 
+### Scope
 
+Global Scope: defined at the top level, not inside of any functions. Available everywhere.
+
+Function Scope: variable defined inside a function. Available inside of the function it was declared in (even in functions declared inside the function).
+
+Block Scope:
+
+JavaScript Engine´ll start looking inside the current function, when trying to access an identifier. 
+If it does not get any results it'll continue to the next outer function to see if it can find there. 
+It will keep doing this until it reaches the global scope.
+
+Minimize the use of global variables. Can lead to bad variable names, conflicting variable names, and messy code.
+
+#### Shadowing or Scope overriding
+
+This first case will shadow, since "x" it is re-asign inside of the function:
+
+```javascript
+var x = 1;
+
+function addTwo() {
+  x = x + 2;
+}
+
+addTwo();
+x = x + 1;
+console.log(x);
+```
+
+The way to avoid it´s by declering "x" in a new variable inside of the function.
+From altering a global scope variable becomes a function scope variable.
+
+```javascript
+var x = 1;
+
+function addTwo() {
+  var x = x + 2;
+}
+
+addTwo();
+x = x + 1;
+console.log(x);
+```
 
 
 
