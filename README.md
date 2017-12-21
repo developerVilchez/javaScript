@@ -138,7 +138,6 @@ that will print:
 
 ## Functions
 
-allow you to put code that you can use & reuse,
 package up code so you can easily use (and reuse) a block of code. 
 
 One parameter, in this case numIngridients:
@@ -198,10 +197,10 @@ Global Scope: defined at the top level, not inside of any functions. Available e
 
 Function Scope: variable defined inside a function. Available inside of the function it was declared in (even in functions declared inside the function).
 
-Block Scope:
+Block Scope: //needs clarification***************************************
 
-JavaScript Engine´ll start looking inside the current function, when trying to access an identifier. 
-If it does not get any results it'll continue to the next outer function to see if it can find there. 
+JavaScript Engine´ll start looking inside the current function when trying to access an identifier. 
+If it does not get any results it'll continue to the next outer function to see if it can find any there. 
 It will keep doing this until it reaches the global scope.
 
 Minimize the use of global variables. Can lead to bad variable names, conflicting variable names, and messy code.
@@ -236,6 +235,18 @@ addTwo();
 x = x + 1;
 console.log(x);
 ```
+
+### Hoisting
+//needs clarification*****************************************
+To avoid bug due to this: 
+always declare functions at the top of the sripts and variables at the top of the functions.
+This way syntax and behavior are consistent.
+
+
+
+
+
+
 
 
 
