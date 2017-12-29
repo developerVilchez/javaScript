@@ -304,7 +304,65 @@ var catSays = function(max) {
 ```
 Function has no name, it is anonymous.
 
+#### Functions as parameters
 
+callback: A function that is passed into another function.
+
+#### Inline function expressions
+//needs clarification*****************************************
+Example:
+```javascript
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+movies(function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+}, "Vikings");
+```
+Returns: My favorite movie is Vikings
+
+Example:
+```javascript
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+emotions("happy", function laugh(num) {
+    var risa = "";
+    for (var i = 0; i < num; i++){
+        risa += "ha";
+    }
+    return risa + "!";
+});
+```
+Returns: I am happy, haha!
+
+
+Example:
+```javascript
+var cry = function sad() {
+    return "boohoo!";
+}
+
+console.log(cry());
+```
+Returns: boohoo!
+
+anonymous inline function expressions: for functions that are not going to be reused.
+
+Example:
+```javascript
+var laugh = function(num) {
+    var L = "";
+    for (i = 0; i < num; i++){
+        L += "ha";
+    }
+    return L + "!";
+}
+
+console.log(laugh(3));
+```
+Returns: hahaha!
 
 
 Source of the materials:
