@@ -179,6 +179,53 @@ function sayHello() {
 ```
 Stops the execution of the function.
 
+#### Some Practise:
+Build a triangle:
+```javascript
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+
+function buildTriangle(length) {
+    var Line = "";
+    for (var i = 1; i <= length; i++) {
+       Line += makeLine(i);
+    }
+    return Line;
+}
+
+console.log(buildTriangle(10));
+```
+prints:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * * 
+
+
+```javascript
+function laugh(num){
+    var laughter = "";
+    for (var x = 0; x < num; ++x ){ 
+        laughter += "ha";
+    }
+return laughter + "!";
+}
+console.log(laugh(3));
+```
+prints:
+hahaha!
+
 ### Run a function
 
 Up to here we only have declare the functions.
@@ -242,10 +289,20 @@ To avoid bug due to this:
 always declare functions at the top of the sripts and variables at the top of the functions.
 This way syntax and behavior are consistent.
 
+### Function Expressions
 
-
-
-
+A function stored inside a variable it's called a function expression.
+Example:
+```javascript
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+```
+Function has no name, it is anonymous.
 
 
 
