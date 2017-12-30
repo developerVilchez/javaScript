@@ -201,16 +201,7 @@ function buildTriangle(length) {
 console.log(buildTriangle(10));
 ```
 prints:
-* 
-* * 
-* * * 
-* * * * 
-* * * * * 
-* * * * * * 
-* * * * * * * 
-* * * * * * * * 
-* * * * * * * * * 
-* * * * * * * * * * 
+![image](https://user-images.githubusercontent.com/30567608/34456985-85ec9bb2-eda4-11e7-83e5-a11aa28311ff.png)
 
 
 ```javascript
@@ -496,6 +487,6 @@ myFish is ["angel", "clown", "drum", "sturgeon"]
 
 More examples [MDN Splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
-Source of the materials:
+## Source of the materials:
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
