@@ -390,9 +390,82 @@ console.log(donuts[0]);
 Prints: "glazed"
 
 In case we need to change the value of an element in array:
-```donuts[1] = "glazed cruller"; 
-console.log(donuts[1]);```
+```
+donuts[1] = "glazed cruller"; 
+console.log(donuts[1]);
+```
 Prints: "glazed cruller"
+
+### Array Properties and Methods
+
+JavaScript provides a large number of built-in methods for modifying arrays and accessing values in an array.
+<!-- Type [] in the console to see full list -->
+List:
+concat()
+Array()
+copyWithin()
+entries()
+every()
+fill()
+filter()
+find()
+findIndex()
+flatMap()
+flatten()
+forEach()
+includes()
+indexOf()
+join()
+keys()
+lastIndexOf()
+map()
+pop()
+push()
+reduce()
+reduceRight()
+reverse()
+shift()
+slice()
+some()
+sort()
+splice()
+toLocaleString()
+toString()
+unshift()
+values()
+
+Array.lenght = find the lenght of an array.
+example:
+```
+var donuts = ["glazed", "powdered", "sprinkled"];
+console.log(donuts.length);
+```
+Prints: 3
+
+Array.push & Array.pop: 
+modifying arrays.
+
+push() = add elements to the end of an array.
+example:
+```
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
+donuts.push("powdered");
+```
+Returns: 7
+donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"]
+
+pop() = remove elements from the end of an array.
+example:
+```
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
+
+donuts.pop(); 
+donuts.pop();
+donuts.pop();
+```
+Returns: "cinnamon sugar"
+donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"]
+
 
 
 
