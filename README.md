@@ -365,6 +365,37 @@ console.log(laugh(3));
 Returns: hahaha!
 
 
+## Arrays
+
+Stores information.
+Stores multiple values into a single, organized data structure. 
+Start an array by listing values separated with commas between square brackets [].
+`var donuts = ["glazed", "powdered", "jelly"];` <br>
+You can store strings, like the example above or numbers, booleans or any type of data. But usually arrays are made out of same data values. <br>
+We can even put an array inside an array to create a nested array.
+
+**Arrays Elements** : Are the individual pieces of data in the array.
+
+**Index**: the position/location of the element inside of the Array (starts counting from 0).
+
+**Accessing Array elements**:
+
+First put the name of the array followed by square brackets [] containing the index of the value you want to access.
+
+Example:
+```javascript
+var donuts = ["glazed", "powdered", "sprinkled"];
+console.log(donuts[0]);
+```
+Prints: "glazed"
+
+In case we need to change the value of an element in array:
+```donuts[1] = "glazed cruller"; 
+console.log(donuts[1]);```
+Prints: "glazed cruller"
+
+
+
 Source of the materials:
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
