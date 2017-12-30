@@ -200,7 +200,7 @@ function buildTriangle(length) {
 
 console.log(buildTriangle(10));
 ```
-prints:
+prints: <br>
 ![image](https://user-images.githubusercontent.com/30567608/34456985-85ec9bb2-eda4-11e7-83e5-a11aa28311ff.png)
 
 
