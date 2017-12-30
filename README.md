@@ -445,7 +445,8 @@ Prints: 3
 Array.push & Array.pop: 
 modifying arrays.
 
-push() = add elements to the end of an array.
+push() = 
+add elements to the end of an array.
 example:
 ```
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
@@ -454,7 +455,8 @@ donuts.push("powdered");
 Returns: 7
 donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"]
 
-pop() = remove elements from the end of an array.
+pop() = 
+remove elements from the end of an array.
 example:
 ```
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
@@ -466,8 +468,33 @@ donuts.pop();
 Returns: "cinnamon sugar"
 donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"]
 
+splice() =
+powerful method.
+changes the contents of an array by removing existing elements and/or adding new elements.
+allows you to specify the index location to add new elements, as well as the number of elements you'd like to delete (if any).
+sintax:
+`array.splice(start[, deleteCount[, item1[, item2[, ...]]]])`
 
+Examples:
+Remove 0 elements from index 2, and insert "drum":
+```
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(2, 0, 'drum');
+```
+result:
+myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"] 
+removed is [], no elements removed
 
+Remove 1 element from index 3:
+```
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(3, 1);
+```
+result:
+removed is ["mandarin"]
+myFish is ["angel", "clown", "drum", "sturgeon"]
+
+More examples [MDN Splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 Source of the materials:
 * MDN
