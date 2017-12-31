@@ -387,7 +387,9 @@ console.log(donuts[1]);
 ```
 Prints: "glazed cruller"
 
-### Array Properties and Methods
+### Array Properties and Methods 
+
+[MDN documentation about Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 JavaScript provides a large number of built-in methods for modifying arrays and accessing values in an array.
 <!-- Type [] in the console to see full list -->
@@ -486,6 +488,56 @@ removed is ["mandarin"]
 myFish is ["angel", "clown", "drum", "sturgeon"]
 
 More examples [MDN Splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+### Array Loops
+
+Example:
+```javascript
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+for (var i = 0; i < donuts.length; i++) {
+    donuts[i] += " hole";
+    donuts[i] = donuts[i].toUpperCase();
+}
+```
+Prints: 
+donuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]
+
+**The forEach() loop**
+ alternative way to iterate over an array
+
+Example:
+```javascript
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+donuts.forEach(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  console.log(donut);
+});
+```
+Prints: 
+JELLY DONUT HOLE
+CHOCOLATE DONUT HOLE
+GLAZED DONUT HOLE
+
+Parameters: can take up to 3.
+forEach() method calls the function once for each element in the array.
+Example:
+```javascript
+words = ["cat", "in", "hat"];
+words.forEach(function(word, num, all) {
+  console.log("Word " + num + " in " + all.toString() + " is " + word);
+});
+```
+Prints:
+Word 0 in cat,in,hat is cat
+Word 1 in cat,in,hat is in
+Word 2 in cat,in,hat is hat
+
+
+
+
 
 ## Source of the materials:
 * MDN
