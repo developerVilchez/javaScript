@@ -793,8 +793,79 @@ Chocolate donuts cost $2.45 each <br>
 Cider donuts cost $1.59 each <br>
 Boston donuts Cream cost $5.99 each <br>
 
+#jQuery
 
+It is a javaScript Library.
 
+$ is a function that points to jQuery.
+
+## DOM
+It is a data structure
+
+parent elements: one level above
+child elements: one level below
+sibling elements: in same level
+
+CDN = Content Delivery Network
+
+Selectors by tag name:
+$('div');
+Selectors by class name:
+$('.container');
+Selectors by id name:
+$('#footer');
+
+DOM transversal methods to move around the Dom:
+$('.container').parent() => inmidiate parent element. only goes up 1 level.
+$('.container').parents() => will go all the way to the top.
+$('.container').child() => only goes down 1 level.
+$('.container').find() => will go down more than one level.
+$('.container').siblings() => that has same parent.
+
+### Methods
+
+toggleClass()
+examples:
+```javascript
+var featuredArticle;
+
+featuredArticle = $('.featured');
+featuredArticle.toggleClass('featured');
+```
+
+toggleClass() & next()
+```javascript
+var article2, article3;
+
+article2 = $(".featured");
+article2.toggleClass("featured");
+
+article3 = article2.next();
+article3.toggleClass("featured");
+```
+
+first() & attr()
+```javascript
+var navList;
+navList = $('.nav-list li a').first();
+navList.attr('href', '#1');
+```
+
+css()
+```javascript
+var articleItems;
+articleItems = $('.article-item');
+articleItems.css("font-size", "20px");
+```
+
+val() & text()
+```javascript
+$('#input').on('change', function() {
+    var val;
+    val = $('#input').val();
+    $(".articles").children("h1").text(val);
+});
+```
 
 ## Source of the materials:
 * MDN
