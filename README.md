@@ -697,6 +697,63 @@ Prints:
   [ 'even','odd','odd','even','odd','odd','odd','even','even','even' ] ]
 
 
+## Objects
+
+It is a data structure in js that allows to store data about a particular item and we can keep track by using "key".
+**key : value** pairs separated from each other by commas.
+Inside curly Braces **{}** entire object is wrapped by it.
+
+Example:
+```javascript
+var sister = {
+  name: "Sarah", 
+  age: 23,
+  parents: [ "alice", "andy" ],
+  siblings: ["julia"],
+  favoriteColor: "purple",
+  pets: true
+};
+```
+This is object-literal notation.
+
+Use they key to get in return value, to acces properties:
+`sister["parents"]` by bracket notation.
+`sister.parents` by dot notation.
+Both returns: `[ "alice", "andy" ]`
+
+"Key" can be a property (like the ones above) or a method.
+Method in the following example is `paintPicture` with a function as a value (the remaining keys are properties):
+```javascript
+var sister = {
+  name: "Sarah",
+  age: 23,
+  parents: [ "alice", "andy" ],
+  siblings: ["julia"],
+  favoriteColor: "purple",
+  pets: true,
+  paintPicture: function() { return "Sarah paints!"; }
+};
+
+sister.paintPicture();
+```
+Returns: "Sarah paints!"
+
+Naming conventions:
+
+To name properties:
+* dont use numbers as first character.
+* dont use spaces
+* dont use "-".
+Usel *camelCase* naming for a multi-word property name, and avoid the space or -.
+
+
+
+
+
+
+
+
+
 
 ## Source of the materials:
 * MDN
