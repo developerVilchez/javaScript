@@ -551,35 +551,7 @@ test.forEach(function(value,index) {
 console.log(test);
 ```
 Prints:
-[ 112,
-  929,
-  11,
-  103,
-  199,
-  1000,
-  7,
-  1,
-  124,
-  37,
-  4,
-  19,
-  400,
-  3775,
-  299,
-  136,
-  209,
-  148,
-  169,
-  299,
-  106,
-  109,
-  20,
-  58,
-  139,
-  59,
-  103,
-  1,
-  139 ]
+[ 112, 929, 11, 103, 199, 1000, 7, 1, 124, 37, 4, 19, 400, 3775, 299, 136, 209, 148, 169, 299, 106, 109, 20, 58, 139, 59, 103, 1, 139 ]
 
 **Map**
 Returns a new array from an existing array.
@@ -722,6 +694,7 @@ Use they key to get in return value, to acces properties:
 Both returns: `[ "alice", "andy" ]`
 
 "Key" can be a property (like the ones above) or a method.
+properties (information about the object) and methods (functions or capabilities the object has).
 Method in the following example is `paintPicture` with a function as a value (the remaining keys are properties):
 ```javascript
 var sister = {
@@ -746,11 +719,79 @@ To name properties:
 * dont use "-".
 Usel *camelCase* naming for a multi-word property name, and avoid the space or -.
 
+Example:
+```javascript
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    printAccountSummary: function () {
+        return "Welcome!\nYour balance is currently $" + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent + "%."
+    }
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+```
+Returns: 
+Welcome!
+Your balance is currently $1000 and your interest rate is 1%.
+
+Example:
+```javascript
+var facebookProfile = {
+    name: "Elena",
+    friends: 200,
+    messages: ["Hola", "Feliz año", "Cómo estas?"],
+    postMessage: function(message){
+        message = "have a great one!";
+        return facebookProfile.messages.push(message);
+    },
+    deleteMessage: function(index){
+        index <= facebookProfile.messages.length;
+        return facebookProfile.messages.splice(index, 1);
+    },
+    addFriend: function(){
+        return facebookProfile.friends +=1;
+    },
+    removeFriend: function(){
+        return facebookProfile.friends -=1;
+    }
+}
+
+```
 
 
+Example:
+```javascript
+var donuts = [
+    { type: "Jelly", cost: 1.22 },
+    { type: "Chocolate", cost: 2.45 },
+    { type: "Cider", cost: 1.59 },
+    { type: "Boston Cream", cost: 5.99 }
+];
 
+// your code goes here
+donuts.forEach(function(element) {
+  console.log(element.type + " donuts cost $" + element.cost + " each");
+});
 
-
+```
+Returns: 
+Jelly donuts cost $1.22 each <br>
+Chocolate donuts cost $2.45 each <br>
+Cider donuts cost $1.59 each <br>
+Boston donuts Cream cost $5.99 each <br>
 
 
 
