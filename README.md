@@ -909,6 +909,78 @@ $('p').each(function(){
 
 
 
+## Event Listening with jQuery
+monitorEvents();
+
+elements are neccesary:
+* target element to listen
+* the event we are listening (kind of event)
+* reaction to the event (function)
+
+the target element calls the callback function when the event occurs
+
+remove() & addClass()
+```javascript
+$("#my-button").on("click", function(){
+    $("#my-button").remove();
+    $('body').addClass("success");
+});
+```
+
+**event object**:
+this object it is called when the function it is triggered
+usually reffer to as: e, evt, or event
+contains info  about the event
+very useful tool.
+
+example:
+```javascript
+$( 'article' ).on( 'click', function( evt ) {
+    console.log( evt );
+});
+```
+
+Common Event Properties:
+altKey, bubbles, button, buttons, cancelable, char, charCode, clientX, clientY, ctrlKey, currentTarget, data, detail, eventPhase, key, keyCode, metaKey, offsetX, offsetY, originalTarget, pageX, pageY, relatedTarget, screenX, screenY, shiftKey, target, toElement, view, which
+there is more.
+
+example:
+```javascript
+$( 'article' ).on( 'keypress', function( evt ) {
+    $( evt.target ).css( 'background', 'red' );
+});
+```
+
+event object can be used to prevent the default action:
+```javascript
+$( '#myAnchor' ).on( 'click', function( evt ) {
+    evt.preventDefault();
+    console.log( 'You clicked a link!' );
+});
+```
+
+**The Convenience Method**
+
+Instead of writing like the previus examples, after the target `$( 'article' ).on( 'keypress', function( evt )`,
+the event that we are waiting for to triggers the function/reaction it becomes a method.
+
+example:
+```javascript
+$( "#other" ).click(function() {
+  $( "#target" ).keypress();
+});
+```
+
+**Event Delegation**
+what about when the target doesn't exist yet? 
+Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
+adding a third parameter between the event and the function
+
+example:
+```javascript
+$( '.container' ).on( 'click', 'article', function() { … });
+```
+
 
 
 
@@ -917,3 +989,4 @@ $('p').each(function(){
 ## Source of the materials:
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
+* [learn.jquery.com](https://learn.jquery.com/events/event-delegation/)
