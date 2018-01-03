@@ -899,6 +899,13 @@ bruce.append(madison);
 hunter.insertAfter(madison);
 ```
 
+each()
+```javascript
+$('p').each(function(){
+    var count = $(this).text().length;
+    $(this).append(" " + count);
+});
+```
 
 
 
