@@ -867,6 +867,46 @@ $('#input').on('change', function() {
 });
 ```
 
+remove()
+```javascript
+var articleItems;
+
+articleItems = $(".article-item");
+articleItems.find("ul").remove();
+```
+
+this add children to an element:
+append() : adds last child to the selected element
+prepend() : adds first child to the selected element
+
+this add sibling to an element:
+insertBefore() : adds the siblings before the selected element
+insertAfter() : adds the siblings after the selected element
+
+```javascript
+var family1, family2, bruce, madison, hunter;
+
+family1 = $('#family1');
+
+family2 = $('<div id="family2"> <h1>Family2</h1> </div>');
+bruce = $('<div id="bruce"> <h2>Bruce</h2> </div>');
+madison = $('<div id="madison"> <h3>Madison</h3> </div>');
+hunter = $ ('<div id="hunter"> <h3>Hunter</h3> </div>');
+
+family2.insertAfter(family1);
+family2.append(bruce);
+bruce.append(madison);
+hunter.insertAfter(madison);
+```
+
+
+
+
+
+
+
+
+
 ## Source of the materials:
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
