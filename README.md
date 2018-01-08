@@ -912,7 +912,7 @@ $('p').each(function(){
 ## Event Listening with jQuery
 monitorEvents();
 
-elements are neccesary:
+elements that are neccesary:
 * target element to listen
 * the event we are listening (kind of event)
 * reaction to the event (function)
