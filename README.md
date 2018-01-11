@@ -7,21 +7,21 @@ Link correctly html to js document:
 `<script src="folderName/documentName.js"></script>`
 
 ### Alert
-To create an alert on the site:
+To create an alert on the site: <br>
 `alert('Hello World!');`
 
 ### Comments
-// One line comments
+// One line comments <br>
 /* for more than one line comments*/
 
 ### Console
-console.log();
-console.table();
-console.error('This is a error');
-console.clear();
-console.warn('This is a warning');
-console.time();
-    between this 2 we can put anything (like console.log('Hello World!'); 4 times) and will print it in the console and tell us the time that took that process.
+console.log();<br>
+console.table();<br>
+console.error('This is a error');<br>
+console.clear();<br>
+console.warn('This is a warning');<br>
+console.time();<br>
+    between this 2 we can put anything (like console.log('Hello World!'); 4 times) and will print it in the console and tell us the time that took that process.<br>
 console.timeEnd();
 
 ## Loops
