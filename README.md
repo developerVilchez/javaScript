@@ -24,6 +24,51 @@ console.time();<br>
     between this 2 we can put anything (like console.log('Hello World!'); 4 times) and will print it in the console and tell us the time that took that process.<br>
 console.timeEnd();
 
+## Variables
+
+**var**
+`var city = "Madrid";` <br>
+This is how you declare a variable.
+Can be reassigned a different value.
+
+**Naming conventions**
+
+* dont use numbers as first character
+* dont use spaces
+* dont use "-"
+* can be used "_" or "$" to start the name but not recomended.
+* Use *camelCase* naming for a multi-word property name, and avoid the space or -.
+
+**Initialize a variable**
+var city; <br>
+without asigning any value initially.
+the value can be assigned afterwards.<br>
+It is often used when there is a condition (If statement, if something it is true city = Barcelona).<br>
+city = Madrid;
+
+**let**
+works similar to *var*. <br>
+was implemented with ES6. <br>
+
+**const**
+constant. <br>
+can not be reassigned. <br>
+a value has to be assigned initially. <br>
+In some cases, like when a *const* declares an object like the one in the following example, and values in the object can be change, what can not change in this case is sister, but can change the age number, the name, etc. <br> 
+We can change the data inside of the object but not the object itself, can not be reassigned to a new object. <br>
+Example:
+```javascript
+const sister = {
+  name: "Sarah", 
+  age: 23,
+  parents: [ "alice", "andy" ],
+  siblings: ["julia"],
+  favoriteColor: "purple",
+  pets: true
+};
+```
+Const make your code more robust and readable.
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
@@ -243,7 +288,7 @@ hahaha!
 
 ### Run a function
 
-Up to here we only have declare the functions.
+Up to here we only have declare the functions. <br>
 For the function to do something, we have to invoke or call the function using the function name, 
 followed by parentheses with any arguments that are passed into it, if it has any.
 `cookChiken(6); or doubleAction(look, jump); or sayHello()`
