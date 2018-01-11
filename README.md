@@ -69,6 +69,31 @@ const sister = {
 ```
 Const make your code more robust and readable.
 
+## Data Types
+
+Primitive & Refrence //needs clarification***************************************
+
+**Primitive data types**:
+* String ('' inside of quotation mark any concadenation of caracthers)
+* Numbers
+* Null (empty value)
+* Undefined (variable that has no value assigned)
+* Boolean (true/false)
+* Symbols (ES6 - )
+
+**Reference data types**:
+* Arrays
+* Objects
+* Functions
+* Dates
+* anything that we can store in a variable
+
+**JavaScript is dinamically typed language**
+data types are associated with values not with the variables. <br>
+same variable can store different types and does not need to specify the type of data. <br>
+
+
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
@@ -343,7 +368,7 @@ x = x + 1;
 console.log(x);
 ```
 
-### Hoisting
+### Hoisting 
 //needs clarification*****************************************
 To avoid bug due to this: 
 always declare functions at the top of the sripts and variables at the top of the functions.
@@ -1053,7 +1078,11 @@ $( '.container' ).on( 'click', 'article', function() { … });
 
 
 
-
+## Needs futher clarification:
+* Primitive & Refrence data types: difference between them.
+* block scope
+* Hoisting 
+* Inline function expressions
 
 ## Source of the materials:
 * MDN
