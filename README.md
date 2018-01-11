@@ -14,6 +14,16 @@ To create an alert on the site:
 // One line comments
 /* for more than one line comments*/
 
+### Console
+console.log();
+console.table();
+console.error('This is a error');
+console.clear();
+console.warn('This is a warning');
+console.time();
+    between this 2 we can put anything (like console.log('Hello World!'); 4 times) and will print it in the console and tell us the time that took that process.
+console.timeEnd();
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
