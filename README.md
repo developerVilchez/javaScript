@@ -26,9 +26,9 @@ console.timeEnd();
 
 ## Variables
 
-**var**
+**var** <br>
 `var city = "Madrid";` <br>
-This is how you declare a variable.
+This is how you declare a variable. <br>
 Can be reassigned a different value.
 
 **Naming conventions**
@@ -39,18 +39,18 @@ Can be reassigned a different value.
 * can be used "_" or "$" to start the name but not recomended.
 * Use *camelCase* naming for a multi-word property name, and avoid the space or -.
 
-**Initialize a variable**
+**Initialize a variable** <br>
 var city; <br>
-without asigning any value initially.
+without asigning any value initially. <br>
 the value can be assigned afterwards.<br>
 It is often used when there is a condition (If statement, if something it is true city = Barcelona).<br>
 city = Madrid;
 
-**let**
+**let** <br>
 works similar to *var*. <br>
 was implemented with ES6. <br>
 
-**const**
+**const** <br>
 constant. <br>
 can not be reassigned. <br>
 a value has to be assigned initially. <br>
