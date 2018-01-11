@@ -1,5 +1,19 @@
 # javaScript
 
+## Basics
+
+### Link
+Link correctly html to js document:
+`<script src="folderName/documentName.js"></script>`
+
+### Alert
+To create an alert on the site:
+`alert('Hello World!');`
+
+### Comments
+// One line comments
+/* for more than one line comments*/
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
@@ -990,3 +1004,4 @@ $( '.container' ).on( 'click', 'article', function() { … });
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
 * [learn.jquery.com](https://learn.jquery.com/events/event-delegation/)
+* JavaScript from the bigining by [Brad Traversy](https://twitter.com/traversymedia)
