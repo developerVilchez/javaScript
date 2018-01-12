@@ -147,11 +147,13 @@ escaping \ in case of conflict with quotation marks<br>
 .charAt(variableName.lenght - 1); will always return last character<br>
 .substring(0, 3); will return a new string (will bring the characters in between the index inside the () in this case the characters from the string from 0 to 3 ) from the original one<br>
 .slice(); more use with arrays. similar to the substring, but if you put a negative number can start from the end of the string<br>
-.split(); a string can be split by the space or coma (what it is split by needs to be spicy inside of the ()) an crate an array with the result. (tags example)<br>
+.split(); a string can be split by the space or coma (what it is split by needs to be specified inside of the ()) an crate an array with the result. (tags example)<br>
 .replace(); <br>
 .includes(); checks in the string if the value you put inside the () it is inside of the original string.<br>
 
-### Template Strings
+### Template literals
+Easier way to write html with js without using concadenation. <br>
+example:
 ```javascript
 const building = 'New Tower';
 const city = 'Berlin';
@@ -529,9 +531,10 @@ Returns: hahaha!
 
 Stores information.
 Stores multiple values into a single, organized data structure. 
-Start an array by listing values separated with commas between square brackets [].
-`var donuts = ["glazed", "powdered", "jelly"];` <br>
-You can store strings, like the example above or numbers, booleans or any type of data. But usually arrays are made out of same data values. <br>
+Start an array by listing values separated with commas between square brackets []. <br>
+Most used one: `var donuts = ["glazed", "powdered", "jelly"];` <br>
+Also can be done with the Array constructor: `var donuts = new Array("glazed", "powdered", "jelly");` <br>
+You can store strings, like the example above or numbers, booleans or any type of data, even mixed them. But usually arrays are made out of same data values. <br>
 We can even put an array inside an array to create a nested array.
 
 **Arrays Elements** : Are the individual pieces of data in the array.
@@ -589,14 +592,14 @@ reverse()
 shift()
 slice()
 some()
-sort()
+sort() 
 splice()
 toLocaleString()
 toString()
 unshift()
 values()
 
-Array.lenght = find the lenght of an array.
+Array.lenght = find the lenght of an array. <br>
 example:
 ```
 var donuts = ["glazed", "powdered", "sprinkled"];
@@ -604,21 +607,21 @@ console.log(donuts.length);
 ```
 Prints: 3
 
-Array.push & Array.pop: 
+Array.push & Array.pop: <br>
 modifying arrays.
 
-push() = 
-add elements to the end of an array.
+push() <br>
+add elements to the end of an array. <br>
 example:
 ```
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
 donuts.push("powdered");
 ```
-Returns: 7
+Returns: 7 <br>
 donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"]
 
-pop() = 
-remove elements from the end of an array.
+pop() =  <br>
+remove elements from the end of an array. <br>
 example:
 ```
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
@@ -627,24 +630,24 @@ donuts.pop();
 donuts.pop();
 donuts.pop();
 ```
-Returns: "cinnamon sugar"
+Returns: "cinnamon sugar" <br>
 donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"]
 
-splice() =
-powerful method.
-changes the contents of an array by removing existing elements and/or adding new elements.
-allows you to specify the index location to add new elements, as well as the number of elements you'd like to delete (if any).
-sintax:
+splice() = <br>
+powerful method. <br>
+changes the contents of an array by removing existing elements and/or adding new elements.<br>
+allows you to specify the index location to add new elements, as well as the number of elements you'd like to delete (if any).<br>
+sintax: <br>
 `array.splice(start[, deleteCount[, item1[, item2[, ...]]]])`
 
-Examples:
+Examples: <br>
 Remove 0 elements from index 2, and insert "drum":
 ```
 var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
 ```
-result:
-myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"] 
+result: <br>
+myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"] <br> 
 removed is [], no elements removed
 
 Remove 1 element from index 3:
@@ -652,8 +655,8 @@ Remove 1 element from index 3:
 var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 ```
-result:
-removed is ["mandarin"]
+result: <br>
+removed is ["mandarin"] <br>
 myFish is ["angel", "clown", "drum", "sturgeon"]
 
 More examples [MDN Splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
