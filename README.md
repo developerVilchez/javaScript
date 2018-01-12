@@ -151,6 +151,23 @@ escaping \ in case of conflict with quotation marks<br>
 .replace(); <br>
 .includes(); checks in the string if the value you put inside the () it is inside of the original string.<br>
 
+### Template Strings
+```javascript
+const building = 'New Tower';
+const city = 'Berlin';
+const country = 'Germany';
+let list;
+
+list = `
+    <ul>
+    <li>Building: ${building}</li>
+    <li>City: ${city}</li>
+    <li>Country: ${country}</li>
+    </ul>
+`;
+
+document.body.innerHTML = list;
+```
 
 ## Loops
 
