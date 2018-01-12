@@ -88,11 +88,37 @@ Primitive & Refrence //needs clarification**************************************
 * Dates
 * anything that we can store in a variable
 
-**JavaScript is dinamically typed language**
+**JavaScript is dinamically typed language** <br>
 data types are associated with values not with the variables. <br>
 same variable can store different types and does not need to specify the type of data. <br>
 
+**Data Type Conversion** <br>
+To a string: <br>
+by adding string(value) <br>
+let amount = string(5); -> it is no longer a number, it is a string.<br>
+same can be done with any data type. <br>
 
+by adding .toString() property <br>
+let amount = (5).toString();
+
+To a number <br>
+by adding Number(value) <br>
+by adding .parseInt() property <br>
+by adding .parseFloat() property <br>
+
+**Data Type Cohersion** <br>
+//needs clarification***************************************
+
+### Math <br>
+Math.round(); will round the number. <br>
+Math.ceil(); will round the number up. <br>
+Math.floor(); will round the number down. <br>
+Math.sqr(); will give you the square root of the number. <br>
+Math.abs(); will give you the absolute of the number. <br>
+Math.pow(); will take 2 values and first the value number, second the value for the times the number will multiply by itself. <br>
+Math.min(); will return the minimun number of the value-numbers inside of the (). <br>
+Math.max(); will return the biggest number of the value-numbers inside of the (). <br>
+Math.random(); will return a random number (). <br>
 
 ## Loops
 
@@ -1079,7 +1105,8 @@ $( '.container' ).on( 'click', 'article', function() { … });
 
 
 ## Needs futher clarification:
-* Primitive & Refrence data types: difference between them.
+* Primitive & Refrence data types: difference between them
+* Data Type Cohersion
 * block scope
 * Hoisting 
 * Inline function expressions
