@@ -110,15 +110,47 @@ by adding .parseFloat() property <br>
 //needs clarification***************************************
 
 ### Math <br>
-Math.round(); will round the number. <br>
-Math.ceil(); will round the number up. <br>
-Math.floor(); will round the number down. <br>
-Math.sqr(); will give you the square root of the number. <br>
-Math.abs(); will give you the absolute of the number. <br>
-Math.pow(); will take 2 values and first the value number, second the value for the times the number will multiply by itself. <br>
-Math.min(); will return the minimun number of the value-numbers inside of the (). <br>
-Math.max(); will return the biggest number of the value-numbers inside of the (). <br>
-Math.random(); will return a random number (). <br>
+`Math.round();` will round the number. <br>
+`Math.ceil();` will round the number up. <br>
+`Math.floor();` will round the number down. <br>
+`Math.sqr();` will give you the square root of the number. <br>
+`Math.abs();` will give you the absolute of the number. <br>
+`Math.pow();` will take 2 values and first the value number, second the value for the times the number will multiply by itself. number to the power of the second number<br>
+`Math.min();` will return the minimun number of the value-numbers inside of the (). <br>
+`Math.max();` will return the biggest number of the value-numbers inside of the (). <br>
+`Math.random();` will return a random number (). <br>
+
+### Strings <br>
+concadenation <br>
+```javascript
+const name = 'Elena';
+const place = ' is here!';
+let status;
+status = name + place
+console.log(status);
+```
+append += <br> 
+```javascript
+let name;
+name = 'Elena';
+name += 'is here!'
+console.log(name);
+```
+escaping \ in case of conflict with quotation marks<br>
+.lenght <br>
+.conact(); <br>
+.toUpperCase(); <br>
+.toLowerCase(); <br>
+.indexOf();<br>
+.lastIndexOf();<br>
+.charAt();<br>
+.charAt(variableName.lenght - 1); will always return last character<br>
+.substring(0, 3); will return a new string (will bring the characters in between the index inside the () in this case the characters from the string from 0 to 3 ) from the original one<br>
+.slice(); more use with arrays. similar to the substring, but if you put a negative number can start from the end of the string<br>
+.split(); a string can be split by the space or coma (what it is split by needs to be spicy inside of the ()) an crate an array with the result. (tags example)<br>
+.replace(); <br>
+.includes(); checks in the string if the value you put inside the () it is inside of the original string.<br>
+
 
 ## Loops
 
