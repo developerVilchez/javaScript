@@ -171,6 +171,69 @@ list = `
 document.body.innerHTML = list;
 ```
 
+## Conditionals
+
+Evaluate a condition an execute based if the condition it is true or not.
+
+```javascript
+const amount =  50;
+
+if(amount == 50){
+    console.log("Well done, It´s correct!")
+} else {
+    console.log("Sorry, not correct this time!")
+}
+```
+returns: <br>
+Well done, It´s correct!<br>
+
+```javascript
+const flavor =  "lemon";
+
+if(flavor === "lemon"){
+    console.log("The flavor is lemon!");
+} else if(flavor === "mint"){
+    console.log("The flavor is mint!");
+} else {
+    console.log("Sorry, there is no flavor!")
+}
+```
+returns: <br>
+The flavor is lemon!<br>
+
+### Operators
+`>` greater than <br>
+`>=` greater than or equal<br>
+`<` less than <br>
+`<=` less than or equal<br>
+`==` equal value <br>
+`===` equal value and type <br>
+`!=` not equal <br>
+`!==` not equal value and type <br>
+`&&` and <br>
+`||` or <br>
+
+example:
+```javascript
+const name =  "Marta";
+const age =  20;
+
+if(age > 0 && age < 12){
+    console.log(`${name} is a child because she is ${age} years old`);
+} else if(age >= 13 && age <= 19){
+    console.log(`${name} is a teen because she is ${age} years old`);
+} else {
+    console.log(`${name} is an adult because she is ${age} years old`);
+}
+```
+returns: <br>
+Marta is an adult because she is 20 years old<br>
+
+### Ternary Operators
+Shorter way to make operators <br>
+represented by the "?" question mark.<br>
+//needs clarification*****************************************
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
@@ -1236,6 +1299,7 @@ $( '.container' ).on( 'click', 'article', function() { … });
 ## Needs futher clarification:
 * Primitive & Refrence data types: difference between them
 * Data Type Cohersion
+* Ternary Operators
 * block scope
 * Hoisting 
 * Inline function expressions
