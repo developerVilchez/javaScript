@@ -234,6 +234,30 @@ Shorter way to make operators <br>
 represented by the "?" question mark.<br>
 //needs clarification*****************************************
 
+### Switch
+
+Recommended when there is a lot of cases.<br>
+very similar else if. <br>
+
+```javascript
+const flavor = "lemon";
+
+switch(flavor){
+    case "lemon":
+        console.log("The flavor is lemon!");
+        break;
+    case "mint":
+        console.log("The flavor is mint!");
+        break;
+    default:
+        console.log("The flavor is not lemon or mint!");
+        break;
+}
+```
+returns: <br>
+The flavor is lemon!<br>
+
+
 ## Loops
 
 Allows iteration. Repeat an action for a number of times.
