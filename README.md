@@ -312,6 +312,11 @@ The flavor is lemon!<br>
 
 Allows iteration. Repeat an action for a number of times.
 
+**Break & continue**
+apply to all kind of loops<br>
+Break: will stop the iteration <br>
+continue: will make the iteration continue.
+
 ### While Loops:
 
 Example:
@@ -327,8 +332,8 @@ console.log( x + " monkey");
 While the condition is true `(x <= 99)` will add one `x = x + 1;`, from the starting point `var x = 0;` and print `console.log( x + " monkey")` for each adition, until the condition stops being true.
 
 Three main parts for a loop:
-* When to start `var x = 0;`
-* When to stop `while (x <= 99)`
+* When to start `var x = 0;` declaration.
+* When to stop `while (x <= 99)` condition.
 * How to get to next item `x = x + 1`
 
 "Fizzbuzz" example:
@@ -403,9 +408,20 @@ console.log( i + " monkey");
 All the neccesary information is declare in the first line.
 
 Three main parts for a loop:
-* When to start `var i = 0;`
-* When to stop `i <= 100;`
-* How to get to next item `i = i + 1 `
+* When to start `var i = 0;` the declaration.
+* When to stop `i <= 100;` the condition.
+* How to get to next item `i = i + 1 ` or `i++ `
+
+### Do While Loops
+Even if the condition it is not true, the out put will run at least once.
+```javascript
+var x = 200;
+do{
+    console.log( x + " monkey");
+    x = x + 1;
+}
+while (x <= 99);
+```
 
 ### Nested Loops
 
@@ -873,8 +889,8 @@ Prints:
 donuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]
 
 **The forEach() loop**
- alternative way to iterate over an array
- Parameters: can take up to 3.
+alternative way to iterate over an array
+Parameters: can take up to 3.(iterator, index, array )
 
 Example:
 ```javascript
@@ -1189,6 +1205,25 @@ Jelly donuts cost $1.22 each <br>
 Chocolate donuts cost $2.45 each <br>
 Cider donuts cost $1.59 each <br>
 Boston donuts Cream cost $5.99 each <br>
+
+**For in loop**
+allow us to iterate through the key value pairs.
+```javascript
+const customer = {
+    Name: "Cristina",
+    LastName:"Smith",
+    age:"25"
+}
+
+for (let person in customer){
+    console.log(`${person} : ${customer[person]}`);
+}
+```
+Returns: <br>
+Name : Cristina<br>
+LastName : Smith<br>
+age : 25<br>
+
 
 ## Dates & Time
 
