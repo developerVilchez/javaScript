@@ -1009,11 +1009,38 @@ Today´s date. <br>
 If you want to declare any other date, just put it inside the () of new Date.<br>
 `const importantDate = new Date("9-10-1981 12:30:00");`<br>
 that will include the date especified date and time. and there is different ways to write it. <br>
+```javascript
+let val;
+const today = new Date();
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
 
+console.log(val);
+```
+Months are cero based, so january it is 0.<br>
+Day is cero based, and start counting on sunday, so saturday is 6<br>
 
+To modify/maniulate dates can be done with "set":
+```javascript
+let anniversarie = new Date("September 21 2006");
+anniversarie.setMonth(1);
+anniversarie.setDate(10);
+anniversarie.setDay(5);
+anniversarie.setFullYear(1986);
+anniversarie.setHours(2);
+anniversarie.setMinutes(45);
+anniversarie.setSeconds(22);
+anniversarie.setMilliseconds(22);
 
-
-
+console.log(anniversarie);
+```
 
 #jQuery
 
