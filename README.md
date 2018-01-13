@@ -18,6 +18,7 @@
 * [Loops](#loops)
     * [While Loops](#while-loops)
     * [For Loops](#for-loops)
+    * [Do While Loops](#do-while-loops)
     * [Nested Loops](#nested-loops)
 * [Functions](#functions)
     * [Type of functions](#type-of-functions)
