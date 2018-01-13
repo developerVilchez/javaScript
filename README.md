@@ -987,11 +987,33 @@ donuts.forEach(function(element) {
 });
 
 ```
-Returns: 
+Returns: <br>
 Jelly donuts cost $1.22 each <br>
 Chocolate donuts cost $2.45 each <br>
 Cider donuts cost $1.59 each <br>
 Boston donuts Cream cost $5.99 each <br>
+
+## Dates & Time
+
+It is an object <br>
+
+```javascript
+let val;
+const today = new Date();
+val = today;
+console.log(val);
+```
+Returns: <br>
+Today´s date. <br>
+
+If you want to declare any other date, just put it inside the () of new Date.<br>
+`const importantDate = new Date("9-10-1981 12:30:00");`<br>
+that will include the date especified date and time. and there is different ways to write it. <br>
+
+
+
+
+
 
 #jQuery
 
