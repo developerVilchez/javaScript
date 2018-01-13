@@ -843,9 +843,9 @@ Prints:
 
 ## Objects
 
-It is a data structure in js that allows to store data about a particular item and we can keep track by using "key".
-**key : value** pairs separated from each other by commas.
-Inside curly Braces **{}** entire object is wrapped by it.
+It is a data structure in js that allows to store data about a particular item and we can keep track by using "key". <br>
+**key : value** pairs separated from each other by commas. <br>
+Inside curly Braces **{}** entire object is wrapped by it.<br>
 
 Example:
 ```javascript
@@ -855,18 +855,29 @@ var sister = {
   parents: [ "alice", "andy" ],
   siblings: ["julia"],
   favoriteColor: "purple",
-  pets: true
-};
+  pets: true,
+  address:{
+      city:"Barcleona",
+      country:"Spain"
+  },
+  hobbies: ["gym", "music"]
+}
 ```
 This is object-literal notation.
 
-Use they key to get in return value, to acces properties:
-`sister["parents"]` by bracket notation.
-`sister.parents` by dot notation.
+Use they key to get in return value, to acces properties: <br>
+`sister["parents"]` by bracket notation.<br>
+`sister.parents` by dot notation.<br>
 Both returns: `[ "alice", "andy" ]`
 
+To access other values:<br>
+`sister.address.country` returns: "Spain" <br>
+`sister.hobbies[0]` returns: "gym" <br>
+
+![image](https://user-images.githubusercontent.com/30567608/34904940-c601ac28-f84f-11e7-8a27-17c75432fd1f.png)
+
 "Key" can be a property (like the ones above) or a method.
-properties (information about the object) and methods (functions or capabilities the object has).
+properties (information about the object) and methods (functions or capabilities the object has).<br>
 Method in the following example is `paintPicture` with a function as a value (the remaining keys are properties):
 ```javascript
 var sister = {
@@ -915,8 +926,8 @@ var savingsAccount = {
 console.log(savingsAccount.printAccountSummary());
 
 ```
-Returns: 
-Welcome!
+Returns: <br>
+Welcome! <br>
 Your balance is currently $1000 and your interest rate is 1%.
 
 Example:
@@ -942,7 +953,25 @@ var facebookProfile = {
 }
 
 ```
+**Array of objects**<br>
 
+Example:
+```javascript
+var person = [
+    { name: "Mario", age: 40 },
+    { name: "Teresa", age: 36 },
+    { name: "Cristina", age: 4 }
+];
+
+for(let i = 0; i < person.length; i++){
+    console.log(person[i].name);
+}
+
+```
+Returns: 
+Mario<br>
+Teresa <br>
+Cristina <br>
 
 Example:
 ```javascript
@@ -953,7 +982,6 @@ var donuts = [
     { type: "Boston Cream", cost: 5.99 }
 ];
 
-// your code goes here
 donuts.forEach(function(element) {
   console.log(element.type + " donuts cost $" + element.cost + " each");
 });
