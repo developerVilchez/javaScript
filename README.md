@@ -1,5 +1,50 @@
 # javaScript
 
+##INDEX
+* [Basics](#basics)
+    * [Link](#link)
+    * [Alert](#alert)
+    * [Comments](#comments)
+    * [Console](#console)
+* [Variables](#variables)
+* [Data Types](#data-types)
+    * [Math](#math-)
+    * [Strings](#strings-)
+    * [Template Literals](#template-literals)
+* [Conditionals](#conditionals)
+    * [Operators](#operators)
+    * [Ternary Operators](#ternary-operators)
+    * [Switch](#switch)
+* [Loops](#loops)
+    * [While Loops](#while-loops)
+    * [For Loops](#for-loops)
+    * [Nested Loops](#nested-loops)
+* [Functions](#functions)
+    * [Print Functions](#print-function)
+    * [Return Functions](#return-function)
+    * [Run a Function](#run-a-function)
+    * [Parameters vs. Arguments](#parameters-vs-arguments)
+    * [Scope](#scope)
+        * [Shadowing or Scope overriding](#shadowing-or-scope-overriding)
+    * [Hoisting](#hoisting)
+    * [Function Expressions](#function-expressions)
+        * [Functions as parameters](#functions-as-parameters)
+        * [Inline function expressions](#inline-function-expressions)
+* [Arrays](#arrays)
+    * [Array Properties and Methods](#array-properties-and-methods)
+    * [Array Loops](#array-loops)
+    * [Arrays in Arrays](#arrays-in-arrays)
+* [Objects](#objects)
+* [Dates & Time](#dates--time)
+* [jQuery](#jQuery)
+    * [DOM](#dom)
+    * [Methods](#methods)
+    * [Event Listening with jQuery](#event-listening-with-jquery)
+* [Needs futher clarification:](#needs-futher-clarification)
+* [Source of the materials:](#source-of-the-materials)
+    
+
+
 ## Basics
 
 ### Link
@@ -1129,7 +1174,7 @@ anniversarie.setMilliseconds(22);
 console.log(anniversarie);
 ```
 
-#jQuery
+# jQuery
 
 It is a javaScript Library.
 
