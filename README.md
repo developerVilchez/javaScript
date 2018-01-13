@@ -1,6 +1,6 @@
 # javaScript
 
-##INDEX
+## INDEX
 * [Basics](#basics)
     * [Link](#link)
     * [Alert](#alert)
@@ -40,8 +40,8 @@
     * [DOM](#dom)
     * [Methods](#methods)
     * [Event Listening with jQuery](#event-listening-with-jquery)
-* [Needs futher clarification:](#needs-futher-clarification)
-* [Source of the materials:](#source-of-the-materials)
+* [Needs futher clarification](#needs-futher-clarification)
+* [Source of the materials](#source-of-the-materials)
     
 
 
