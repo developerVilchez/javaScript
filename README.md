@@ -430,7 +430,7 @@ that will print:
 > 3, 1 <br>
 > 3, 2 <br>
 
-#### Increment and decrement 
+**Increment and decrement**
 
 > x++ or ++x // same as x = x + 1 <br>
 > x-- or --x // same as x = x - 1 <br>
@@ -443,32 +443,166 @@ that will print:
 
 package up code so you can easily use (and reuse) a block of code. 
 
-One parameter, in this case numIngridients:
+### Type of functions:<br>
+functions expressions, functions declarations, property methods. <br>
+They all can take parameters. <br>
+
+#### functions declarations
 ```javascript
-function cookChiken(numIngridients) {
-  // code to do something here
+function greeting() {
+  return 'Hello';
 }
+console.log(greeting());
+```
+Returns: <br>
+Hello<br>
+
+One parameter, in this case name:
+```javascript
+function greeting(name) {
+  return 'Hello ' +  name;
+}
+console.log(greeting('Leticia'));
+```
+Returns: <br>
+Hello Leticia<br>
+
+More parameters, in this case name & lastName:
+```javascript
+function greeting(name, lastName) {
+  return 'Hello ' +  name + ' ' + lastName;
+}
+console.log(greeting('Leticia', 'Smith'));
+```
+Returns: <br>
+Hello Leticia Smith<br>
+
+Default values for parameters in case of undefine, in case the parameters are not passed:<br>
+```javascript
+function greeting(name = "John", lastName = "Smith") {
+  return 'Hello ' +  name + ' ' + lastName;
+}
+console.log(greeting());
+```
+Returns: <br>
+Hello John Smith<br>
+If paramaters are passed will over-write the default values.
+
+#### Function Expressions
+
+A function stored inside a variable it's called a function expression.
+Examples:
+
+```javascript
+const amount = function(y = 3){
+    return y + y;
+};
+console.log(amount(5));
+```
+Returns: 10. <br>
+"y" is = 3 to have a default, but it is over-writen by the arguments passed 5, in this case.
+
+```javascript
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+```
+Function has no name, it is anonymous.
+
+##### Functions as parameters
+
+callback: A function that is passed into another function.
+
+##### Inline function expressions
+//needs clarification*****************************************
+Example:
+```javascript
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+movies(function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+}, "Vikings");
+```
+Returns: My favorite movie is Vikings
+
+Example:
+```javascript
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+emotions("happy", function laugh(num) {
+    var risa = "";
+    for (var i = 0; i < num; i++){
+        risa += "ha";
+    }
+    return risa + "!";
+});
+```
+Returns: I am happy, haha!
+
+
+Example:
+```javascript
+var cry = function sad() {
+    return "boohoo!";
+}
+
+console.log(cry());
+```
+Returns: boohoo!
+
+anonymous inline function expressions: for functions that are not going to be reused.
+
+Example:
+```javascript
+var laugh = function(num) {
+    var L = "";
+    for (i = 0; i < num; i++){
+        L += "ha";
+    }
+    return L + "!";
+}
+
+console.log(laugh(3));
+```
+Returns: hahaha!
+
+#### Inmidiatley Invokable function expresions - IIFEs
+It is declare and run at the same time. <br>
+very useful in case of modules. <br>
+```javascript
+(function(city){
+    console.log('We are travelling to ' + city + '!')
+})('Oslo');
 ```
 
-More parameters, in this case action1 & action2:
+#### Property methods
+Put functions inside of objects:
 ```javascript
-function doubleAction(action1, action2) {
-  // code here
+const list = {
+    add: function(){
+        console.log('Add item')
+    }
 }
+list.add();
 ```
 
-No parameters, empty:
+### Print function
+
+using console.log, like this example, only displays a value.
 ```javascript
 function sayHello() {
   var message = "Hello!"
   console.log(message);
 }
 ```
-
-### Print function
-
-using console.log, like the example above, only displays a value.
-good to test code, get feedback and debugging purposes.
+Good to test code, get feedback and debugging purposes.
 `console.log` to test your code in the JavaScript console, just that.
 
 ### Return function
@@ -583,80 +717,6 @@ To avoid bug due to this:
 always declare functions at the top of the sripts and variables at the top of the functions.
 This way syntax and behavior are consistent.
 
-### Function Expressions
-
-A function stored inside a variable it's called a function expression.
-Example:
-```javascript
-var catSays = function(max) {
-  var catMessage = "";
-  for (var i = 0; i < max; i++) {
-    catMessage += "meow ";
-  }
-  return catMessage;
-};
-```
-Function has no name, it is anonymous.
-
-#### Functions as parameters
-
-callback: A function that is passed into another function.
-
-#### Inline function expressions
-//needs clarification*****************************************
-Example:
-```javascript
-function movies(messageFunction, name) {
-  messageFunction(name);
-}
-
-movies(function displayFavorite(movieName) {
-  console.log("My favorite movie is " + movieName);
-}, "Vikings");
-```
-Returns: My favorite movie is Vikings
-
-Example:
-```javascript
-function emotions(myString, myFunc) {
-    console.log("I am " + myString + ", " + myFunc(2));
-}
-emotions("happy", function laugh(num) {
-    var risa = "";
-    for (var i = 0; i < num; i++){
-        risa += "ha";
-    }
-    return risa + "!";
-});
-```
-Returns: I am happy, haha!
-
-
-Example:
-```javascript
-var cry = function sad() {
-    return "boohoo!";
-}
-
-console.log(cry());
-```
-Returns: boohoo!
-
-anonymous inline function expressions: for functions that are not going to be reused.
-
-Example:
-```javascript
-var laugh = function(num) {
-    var L = "";
-    for (i = 0; i < num; i++){
-        L += "ha";
-    }
-    return L + "!";
-}
-
-console.log(laugh(3));
-```
-Returns: hahaha!
 
 
 ## Arrays
