@@ -1376,14 +1376,18 @@ anniversarie.setMilliseconds(22);
 
 console.log(anniversarie);
 ```
+## DOM
 
-# jQuery
+
+
+
+## jQuery
 
 It is a javaScript Library.
 
 $ is a function that points to jQuery.
 
-## DOM
+## Accesing DOM with jQuery
 It is a data structure
 
 parent elements: one level above
