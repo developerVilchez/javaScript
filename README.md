@@ -57,10 +57,6 @@
 Link correctly html to js document:
 `<script src="folderName/documentName.js"></script>`
 
-### Alert
-To create an alert on the site: <br>
-`alert('Hello World!');`
-
 ### Comments
 // One line comments <br>
 /* for more than one line comments*/
@@ -74,6 +70,108 @@ console.warn('This is a warning');<br>
 console.time();<br>
     between this 2 we can put anything (like console.log('Hello World!'); 4 times) and will print it in the console and tell us the time that took that process.<br>
 console.timeEnd();
+
+### Window Object & Properties
+
+**Alert**
+To create an alert on the site: <br>
+`alert('Hello World!');`
+
+**Prompt**
+Similar to alert, excepts that takes an input<br>
+`prompt();`
+>Syntax:<br>
+>prompt(text, defaultText)
+```javascript
+var name = prompt("Your name:", "");
+alert("Hello " + name);
+```
+```javascript
+var name = prompt("Your name:", "Visitor");
+document.write("Hello ", name);
+```
+
+**Confirm**
+>Syntax:<br>
+>confirm(message)
+`confirm();`
+
+```javascript
+if(confirm('do you want to delete the picture?')){
+    console.log('Picture deleted);
+}
+```
+
+**Outer height & weight**
+```javascript
+let val;
+val = window.outerHeight;
+val = window.outerWidth;
+console.log(val);
+```
+Returns the width or height of the window, top to bottom of the screen.<br>
+
+**Inner height & weight**
+```javascript
+let val;
+val = window.innerHeight;
+val = window.innerWidth;
+console.log(val);
+```
+Returns the width or height of the window of the visible site itself<br>
+
+**Scroll points**
+```javascript
+let val;
+val = window.scrollY;
+val = window.scrollX;
+console.log(val);
+```
+Returns the scroll point where the window of the site is at.<br>
+
+**Location**
+```javascript
+let val;
+val = window.location;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+console.log(val);
+```
+Get different information of the site<br>
+
+```javascript
+window.location.href = "http://anything.com";
+```
+Redirect the site<br>
+
+```javascript
+window.location.reload();
+```
+will make it reload, will be inside a function not in gloal scope like the example, this will amke the site to reload constantly<br>
+
+**History**
+```javascript
+let val;
+window.history.go(-1);
+
+```
+It goes in history as many steps as we indicate inside ()<br>
+```javascript
+window.history.length;
+
+```
+It will saw the lenght of history ()<br>
+
+**Navigator**
+```javascript
+let val;
+val = window.navigator;
+console.log(val);
+```
+Navigator information <br>
+
 
 ## Variables
 
@@ -1479,3 +1577,4 @@ $( '.container' ).on( 'click', 'article', function() { … });
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
 * [learn.jquery.com](https://learn.jquery.com/events/event-delegation/)
 * JavaScript from the bigining by [Brad Traversy](https://twitter.com/traversymedia)
+* [Code Maven](https://code-maven.com/javascript-input-with-prompt-and-confirm)
