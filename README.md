@@ -788,17 +788,21 @@ followed by parentheses with any arguments that are passed into it, if it has an
 
 ### Scope
 
-Global Scope: defined at the top level, not inside of any functions. Available everywhere.
+Global Scope: defined at the top level, not inside of any functions. Available everywhere.<br>
 
-Function Scope: variable defined inside a function. Available inside of the function it was declared in (even in functions declared inside the function).
+Function Scope: variable defined inside a function. Available inside of the function it was declared in (even in functions declared inside the function).<br>
 
 Block Scope: //needs clarification***************************************
 
 JavaScript Engine´ll start looking inside the current function when trying to access an identifier. 
 If it does not get any results it'll continue to the next outer function to see if it can find any there. 
-It will keep doing this until it reaches the global scope.
+It will keep doing this until it reaches the global scope.<br>
 
 Minimize the use of global variables. Can lead to bad variable names, conflicting variable names, and messy code.
+
+**var, let and const**
+var has function scope <br>
+let and const have a block scope<br>
 
 #### Shadowing or Scope overriding
 
@@ -1569,6 +1573,7 @@ $( '.container' ).on( 'click', 'article', function() { … });
 * Data Type Cohersion
 * Ternary Operators
 * block scope
+* difference between var, let and const in scope
 * Hoisting 
 * Inline function expressions
 
