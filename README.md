@@ -3,9 +3,9 @@
 ## INDEX
 * [Basics](#basics)
     * [Link](#link)
-    * [Alert](#alert)
     * [Comments](#comments)
     * [Console](#console)
+    * [Window Object & Properties](#window-object--properties)
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -98,7 +98,7 @@ document.write("Hello ", name);
 
 ```javascript
 if(confirm('do you want to delete the picture?')){
-    console.log('Picture deleted);
+    console.log('Picture deleted');
 }
 ```
 
@@ -841,28 +841,28 @@ This way syntax and behavior are consistent.
 
 ## Arrays
 
-Stores information.
-Stores multiple values into a single, organized data structure. 
+Stores information. <br>
+Stores multiple values into a single, organized data structure. <br>
 Start an array by listing values separated with commas between square brackets []. <br>
 Most used one: `var donuts = ["glazed", "powdered", "jelly"];` <br>
 Also can be done with the Array constructor: `var donuts = new Array("glazed", "powdered", "jelly");` <br>
 You can store strings, like the example above or numbers, booleans or any type of data, even mixed them. But usually arrays are made out of same data values. <br>
-We can even put an array inside an array to create a nested array.
+We can even put an array inside an array to create a nested array.<br>
 
-**Arrays Elements** : Are the individual pieces of data in the array.
+**Arrays Elements** : Are the individual pieces of data in the array.<br>
 
-**Index**: the position/location of the element inside of the Array (starts counting from 0).
+**Index**: the position/location of the element inside of the Array (starts counting from 0).<br>
 
 **Accessing Array elements**:
 
-First put the name of the array followed by square brackets [] containing the index of the value you want to access.
+First put the name of the array followed by square brackets [] containing the index of the value you want to access.<br>
 
 Example:
 ```javascript
 var donuts = ["glazed", "powdered", "sprinkled"];
 console.log(donuts[0]);
 ```
-Prints: "glazed"
+Prints: "glazed"<br>
 
 In case we need to change the value of an element in array:
 ```
@@ -984,10 +984,10 @@ for (var i = 0; i < donuts.length; i++) {
     donuts[i] = donuts[i].toUpperCase();
 }
 ```
-Prints: 
+Prints: <br>
 donuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]
 
-**The forEach() loop**
+**The forEach() loop** <br>
 alternative way to iterate over an array
 Parameters: can take up to 3.(iterator, index, array )
 
@@ -1001,12 +1001,12 @@ donuts.forEach(function(donut) {
   console.log(donut);
 });
 ```
-Prints: 
+Prints: <br>
 JELLY DONUT HOLE
 CHOCOLATE DONUT HOLE
 GLAZED DONUT HOLE
 
-forEach() method calls the function once for each element in the array.
+forEach() method calls the function once for each element in the array.<br>
 Example:
 ```javascript
 words = ["cat", "in", "hat"];
@@ -1014,10 +1014,10 @@ words.forEach(function(word, num, all) {
   console.log("Word " + num + " in " + all.toString() + " is " + word);
 });
 ```
-Prints:
-Word 0 in cat,in,hat is cat
-Word 1 in cat,in,hat is in
-Word 2 in cat,in,hat is hat
+Prints:<br>
+Word 0 in cat,in,hat is cat<br>
+Word 1 in cat,in,hat is in<br>
+Word 2 in cat,in,hat is hat<br>
 
 Example:
 ```javascript
@@ -1034,12 +1034,12 @@ test.forEach(function(value,index) {
 
 console.log(test);
 ```
-Prints:
+Prints:<br>
 [ 112, 929, 11, 103, 199, 1000, 7, 1, 124, 37, 4, 19, 400, 3775, 299, 136, 209, 148, 169, 299, 106, 109, 20, 58, 139, 59, 103, 1, 139 ]
 
-**Map**
-Returns a new array from an existing array.
-Accepts only 1 argument.
+**Map**<br>
+Returns a new array from an existing array.<br>
+Accepts only 1 argument.<br>
 
 Example:
 ```javascript
@@ -1051,9 +1051,9 @@ var improvedDonuts = donuts.map(function(donut) {
   return donut;
 });
 ```
-Prints:
-donuts array: ["jelly donut", "chocolate donut", "glazed donut"]
-improvedDonuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]
+Prints:<br>
+donuts array: ["jelly donut", "chocolate donut", "glazed donut"]<br>
+improvedDonuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]<br>
 
 Example:
 ```javascript
@@ -1305,7 +1305,7 @@ Chocolate donuts cost $2.45 each <br>
 Cider donuts cost $1.59 each <br>
 Boston donuts Cream cost $5.99 each <br>
 
-**For in loop**
+**For in loop**<br>
 allow us to iterate through the key value pairs.
 ```javascript
 const customer = {
