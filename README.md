@@ -10,6 +10,8 @@
     * [Accesing DOM with javaScript](#accesing-dom-with-javascript)
         * [Properties of the document object](#properties-of-the-document-object)
         * [Methods of the document object](#methods-of-the-document-object)
+        * [DOM transversal methods](#dom-transversal-methods)
+        * [Create elements and add to DOM](#create-elements-and-add-to-dom)
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -337,6 +339,73 @@ document.querySelector('ul.shoppin-list').appendChild(newItem);
 
 console.log(newItem); 
 ```
+
+#### Removing elements and replacing to DOM 
+
+**Replace element**
+```javascript
+//create element
+const newTitle = document.createElement('h2');
+//add id
+newTitle.id = 'task-title';
+//new text node
+const newText = document.createTextNode('Task List');
+newTitle.appendChild(newText);
+
+//get old title
+const oldTitle = document.getEementById('task-title');
+//parent
+const cardContainer = document.querySelector('.card-container');
+
+//Replace
+cardContainer.replaceChild(newTitle, oldTitle);
+```
+
+**Remove element**
+```javascript
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+//remove a particular element/item by remove();.
+lis[0].remove();
+//remove a particular element/item by removeChild();.
+list.removeChild(lis[2]);
+```
+
+**Class & Attributes**
+Class
+```javascript
+const firstItem = document.querySelector('li:first-child');
+const link = firstItem.children[0];
+
+let val;
+val = link.className; //return the classes names.
+val = link.classList; // returns the array of classes of the element
+val = link.classList[0]; // returns the first class of the element
+link.classList.add('remove'); //added a new class
+link.classList.remove('remove'); //remove the mentionned class
+
+console.log(val);
+```
+
+Attributes
+```javascript
+const firstItem = document.querySelector('li:first-child');
+const link = firstItem.children[0];
+
+let val;
+
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://anything.com');
+val = link.hasAttribute('href'); //returns true or false after checking if it has that attribute or not.
+//add & remove attribute:
+link.setAttribute('href', 'http://anything.com');
+link.removeAttribute('href');
+
+
+console.log(val);
+```
+
+
 
 ## Variables
 
