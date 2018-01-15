@@ -74,6 +74,8 @@ console.timeEnd();
 
 ### Window Object & Properties
 
+Window Object: Global object of the browser enviroment.
+
 **Alert**
 To create an alert on the site: <br>
 `alert('Hello World!');`
@@ -172,6 +174,107 @@ val = window.navigator;
 console.log(val);
 ```
 Navigator information <br>
+
+
+### DOM
+
+Document Object Model <br>
+The visual representation of the DOM will be like HTML.<br>
+The DOM is a cross-platform and language-independent application programming interface that treats a HTML document as a tree structure where each node is an object representing a part of the document. <br>
+It is object oriented, objects can be manipulated programmatically and any visible changes occurring as a result may then be reflected in the display of the document.<br>
+We can use javascript to manipulate de nodes/elements in the Document <br>
+
+### Accesing DOM with javaScript
+
+#### Properties of the document object:
+Should know, usually it is done with methods selector.
+
+**Document**
+```javascript
+let val;
+val = document;
+val = document.all; //shows all the tags of the HTML in an array and it can be access with [].
+val = document.lenght;
+val = document.body; // or any part like links, forms, etc.
+val = document.domain; 
+val = document.URL;
+val = document.scripts[1].getAttribute('src'); // will get back the name of the second script in the dom.
+
+console.log(val);
+```
+
+#### Methods of the document object:
+**DOM Selectors** <br>
+will allows us to target elemnts in the DOM and do things with those.<br>
+**Single element selectors**<br>
+By ID: getElementById <br>
+```javascript
+const mainContainer = document.getElementById('container');
+//the following ones are normally attached to events:
+mainContainer.style.background = '#000'; //change style, in this case of background.
+mainContainer.style.display = 'none'; //to hide
+mainContainer.textContent = 'Shopping List'; //to change the content.
+mainContainer.innerText = 'Shopping List'; //to change the content.
+mainContainer.innerHTML = '<span>Shopping List<span>'; //to change the content.
+```
+By anything: querySelector<br>
+```javascript
+document.querySelector('#container');
+document.querySelector('li').style.color = 'black';
+document.querySelector('ul li').style.color = 'black';
+```
+
+"querySelector" will only affect one of them, the first one, in case of multiple elements with same class o element tag.<br>
+In case we need it to target one but not the first one:
+
+```javascript
+document.querySelector('li:last-child').textContent = 'lemons';
+document.querySelector('li:nth-child(3)').style.color = 'black';
+```
+
+**Multiple element selectors**<br>
+By Class Name: getElementByClassName <br>
+```javascript
+const listItems = document.getElementByClassName('list-items');
+
+console.log(listItems);// will retun all items with that class as an array.
+listItems[3].style.color = "pink";
+```
+
+By Tag Name: getElementByTagName <br>
+```javascript
+const listItems = document.getElementByTagName('li');
+
+console.log(listItems);// will retun all items with the same tag as an array.
+listItems[3].style.color = "pink";
+```
+
+By anything: querySelectorAll<br>
+node list.
+```javascript
+document.querySelectorAll('#container');
+document.querySelectorAll('li').textContent = 'hello';
+document.querySelectorAll('ul li').style.color = 'white';
+document.querySelectorAll('li:nth-child(odd)').style.background = 'black';
+document.querySelectorAll('li:nth-child(even)').style.background = 'red';
+```
+for each loop (only for arrays):
+```javascript
+liOdd = document.querySelectorAll('li:nth-child(odd)');
+liOdd.forEach(function(li, index){
+    li.style.background = 'lightgrey';
+});
+```
+
+for loop:
+```javascript
+liEven = document.querySelectorAll('li:nth-child(even)');
+for(let i = 0; i < liEven.lenght; ++i){
+    liEven[i].style.background = 'hotpink';
+}
+```
+
+
 
 
 ## Variables
@@ -1377,9 +1480,6 @@ anniversarie.setMilliseconds(22);
 
 console.log(anniversarie);
 ```
-## DOM
-
-
 
 
 ## jQuery
@@ -1388,7 +1488,7 @@ It is a javaScript Library.
 
 $ is a function that points to jQuery.
 
-## Accesing DOM with jQuery
+### Accesing DOM with jQuery
 It is a data structure
 
 parent elements: one level above
@@ -1585,6 +1685,7 @@ $( '.container' ).on( 'click', 'article', function() { … });
 ## Source of the materials:
 * MDN
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
+* [Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model)
 * [learn.jquery.com](https://learn.jquery.com/events/event-delegation/)
 * JavaScript from the bigining by [Brad Traversy](https://twitter.com/traversymedia)
 * [Code Maven](https://code-maven.com/javascript-input-with-prompt-and-confirm)
