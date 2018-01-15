@@ -6,6 +6,10 @@
     * [Comments](#comments)
     * [Console](#console)
     * [Window Object & Properties](#window-object--properties)
+* [DOM](#dom)
+    * [Accesing DOM with javaScript](#accesing-dom-with-javascript)
+        * [Properties of the document object](#properties-of-the-document-object)
+        * [Methods of the document object](#methods-of-the-document-object)
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -42,7 +46,6 @@
     * [Arrays in Arrays](#arrays-in-arrays)
 * [Objects](#objects)
 * [Dates & Time](#dates--time)
-* [DOM](#dom)
 * [jQuery](#jQuery)
     * [Accesing DOM with jQuery](#accesing-dom-with-jquery)
     * [Methods](#methods)
@@ -273,9 +276,67 @@ for(let i = 0; i < liEven.lenght; ++i){
     liEven[i].style.background = 'hotpink';
 }
 ```
+#### DOM transversal methods
+Move around the DOM <br>
+```javascript
+let val;
 
+const list = document.querySelector('ul.shoppin-list');
+const listItem = document.querySelector('li.shoppin-list-item');
 
+//get child nodes - returns node list (not just elements)
+val = list.childNodes;
+//get the children element nodes - returns html collection
+val = list.children;
+val = list.children[2];
+list.children[1].textContent = 'Hello';
+//get children of children
+val = list.children[2].children;
+//get first node child:
+val = list.firstChild;
+//get first element child:
+val = list.firstElementChild;
+//get last node child:
+val = list.lastChild;
+//get last element child:
+val = list.lastElementChild;
 
+//get parents
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+//get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+
+//get previous sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+
+console.log(val);
+```
+
+#### Create elements and add to DOM 
+
+```javascript
+const newItem = document.createElement('li');
+// add class to the new li
+newItem.className = 'list-item'
+// add id to the new li
+newItem.id = 'new-item'
+// add attribute to the new li
+newItem.setAttribute('title','New Item');
+// Create text node and append - (if it does not have a text node just element tags .innerHTML)
+const newText = document.createTextNode('Oranges');
+newItem.appendChild(newText);
+//this will be text inside of the li tag, so will look like this: <li id = 'new-item' class='list-item' title='New Item'>Oranges</li>
+
+//append new li as a child to the existing ul
+document.querySelector('ul.shoppin-list').appendChild(newItem);
+
+console.log(newItem); 
+```
 
 ## Variables
 
