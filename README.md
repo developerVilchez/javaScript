@@ -404,6 +404,46 @@ link.removeAttribute('href');
 
 console.log(val);
 ```
+### Event listeners & Event Object
+Listening to the Dom <br>
+with anonymous function
+```javascript
+cosnt submitButton = document.querySelector('.clearTask');
+submitButton.addEventListener("click", function(e){
+    e.preventDefault();
+    console.log('Hola');
+};)
+```
+with a named function
+```javascript
+cosnt submitButton = document.querySelector('.clearTask');
+submitButton.addEventListener("click", onClick);
+function onClick(e){
+    e.preventDefault();
+    console.log('Hola');
+}
+```
+Event Object<br>
+this object it is called when the function it is triggered. <br>
+usually reffer to as: e, evt, or event<br>
+contains information about the event
+
+```javascript
+cosnt submitButton = document.querySelector('.clearTask');
+submitButton.addEventListener("click", onClick);
+function onClick(e){
+    let val;
+    val = e; //to see everything associated with the event object.
+    val = e.target; // returns the targeted element
+    val = e.target.className; // returns class name of the targeted element.
+    e.target.innerText = 'Hello'; // change the text on the targeted element when the event happens
+    val = e.type;//will show the type of event associated
+    
+    //There is many other properties for the event object, check documentation about it if neccesary.
+
+    console.log(val);
+}
+```
 
 
 
