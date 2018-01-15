@@ -12,6 +12,8 @@
         * [Methods of the document object](#methods-of-the-document-object)
         * [DOM transversal methods](#dom-transversal-methods)
         * [Create elements and add to DOM](#create-elements-and-add-to-dom)
+        * [Removing elements and replacing to DOM](#removing-elements-and-replacing-to-dom)
+    * [Event listeners & Event Object](#event-listeners--event-object)
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -371,7 +373,7 @@ lis[0].remove();
 list.removeChild(lis[2]);
 ```
 
-**Class & Attributes**
+**Class & Attributes**<br>
 Class
 ```javascript
 const firstItem = document.querySelector('li:first-child');
