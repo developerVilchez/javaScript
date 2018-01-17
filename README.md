@@ -446,6 +446,37 @@ function onClick(e){
     console.log(val);
 }
 ```
+#### Mouse events
+```javascript
+const submitButton  = document.querySelector('.clearTask');
+//click
+submitButton.addEventListener("click", runEvent);
+//Double-click
+submitButton.addEventListener("dblclick", runEvent);
+//mousedown
+submitButton.addEventListener("mousedown", runEvent);
+//mouseup
+submitButton.addEventListener("mouseup", runEvent);
+//mouseenter
+submitButton.addEventListener("mouseenter", runEvent);
+//mouseleave
+submitButton.addEventListener("mouseleave", runEvent);
+//mouseover
+submitButton.addEventListener("mouseover", runEvent);
+//mouseout
+submitButton.addEventListener("mouseout", runEvent);
+//mousemove
+submitButton.addEventListener("mousemove", runEvent);
+
+//event handler function
+function runEvent(e){
+    e.preventDefault();
+    console.log(`Event type: ${e.type}`);
+}
+```
+Example inspired by this lesson [Mouse event in codepen](https://codepen.io/Elena_in_code/pen/goBvYr/)
+
+#### Keyboard events
 
 
 
