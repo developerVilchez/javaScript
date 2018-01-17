@@ -1915,6 +1915,63 @@ example:
 $( '.container' ).on( 'click', 'article', function() { … });
 ```
 
+## local & session storage
+**local storage**
+will stay until clear manually. <br>
+to see: browser dev. tools > application > local storage <br>
+add in the console:<br>
+example:
+```javascript
+localStorage.setItem("name", "Marta");
+```
+remove from storage: <br>
+```javascript
+localStorage.removeItem("name");
+```
+get value from storage: <br>
+```javascript
+const name = localStorage.getItem("name");
+console.log(name);
+```
+clear local storage: <br>
+```javascript
+localStorage.clear();
+```
+add task to local storage: <br>
+```javascript
+document.querySelector("form").addEventListener("submit", function(e){
+    //get the input value
+    const inputContent = document.getElementById("task").value;
+    //JSON & If statement neccesary to stored more than one task. otherwhise will only be stored one at the time.
+    let tasks;
+
+    if(localStorage.getItem("tasks") === null){
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem("tasks"));
+    }
+    task.push(inputContent);
+
+    //add the value to the local storage
+    localStorage.setItem("tasks", JSON.stringify(inputContent));
+    alert("Task saved!");
+    e.preventDefault();
+});
+//to print the list of tasks stored locally
+const tasks = JSON.parse(localSotage.getItem("tasks"));
+    tasks.forEach(function(task){
+        console.log(tasks);
+});
+```
+
+**sesion storage**
+will be clear when browser it is close.<br>
+to see: browser dev. tools > application > session storage <br>
+add in the console:<br>
+example:
+```javascript
+sessionStorage.setItem("name", "Carlos");
+```
 
 
 
