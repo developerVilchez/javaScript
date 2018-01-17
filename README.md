@@ -14,6 +14,9 @@
         * [Create elements and add to DOM](#create-elements-and-add-to-dom)
         * [Removing elements and replacing to DOM](#removing-elements-and-replacing-to-dom)
     * [Event listeners & Event Object](#event-listeners--event-object)
+        * [Mouse events](#mouse-events)
+        * [Keyboard & Input events](#keyboard--input-events)
+        * []()
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -493,11 +496,30 @@ also events: cut, paste,<br>
 Input event: anything that happens in the input. any of the above. <br>
 change
 
-
+#### Event Bubbling & Event delegation
+**Bubbling**<br>
+Bubble up, to the parents, of events in the DOM.<br>
 
 ```javascript
 
 ```
+
+**Event Delegation** <br>
+the listener it is on the parent element. <br>
+neccessary in case we want to target elements that are created dinamically with js. <br>
+
+```javascript
+const deleteItemList = document.querySelector(".delete-item");
+deleteItemList.addEventListener("click", deleteItem);
+
+function deleteItem(e){
+    if(e.target.parentElement.classList.contains("delete-item")){
+        e.target.parentElement.parentElement.remove();
+    }
+}
+```
+Delete targeting the parent for the event listener.
+
 
 
 ## Variables
@@ -1904,6 +1926,7 @@ $( '.container' ).on( 'click', 'article', function() { … });
 * difference between var, let and const in scope
 * Hoisting 
 * Inline function expressions
+* event delegation in javascript
 
 ## Source of the materials:
 * MDN
