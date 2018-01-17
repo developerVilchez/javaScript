@@ -476,8 +476,28 @@ function runEvent(e){
 ```
 Example inspired by this lesson [Mouse event in codepen](https://codepen.io/Elena_in_code/pen/goBvYr/)
 
-#### Keyboard events
+#### Keyboard & Input events
+form - submit event: redirects neccsary e.preventDeafult. <br>
+to clear input: inputClass.value = " ";<br>
+get input value: console.log(inputClass.value); <br>
+get input value - inside of function event handler: console.log(e.target.value); <br>
+Example inspired by this lesson [event target - input value - keyup in codepen](https://codepen.io/Elena_in_code/pen/KZGRZa)
 
+**key events** <br>
+Events: keydown, keyup, keypress.<br>
+
+**Input**<br>
+Blur: when click outside of the input area<br>
+focus: when click inside of the input area <br>
+also events: cut, paste,<br>
+Input event: anything that happens in the input. any of the above. <br>
+change
+
+
+
+```javascript
+
+```
 
 
 ## Variables
