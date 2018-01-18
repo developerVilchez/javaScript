@@ -16,7 +16,7 @@
     * [Event listeners & Event Object](#event-listeners--event-object)
         * [Mouse events](#mouse-events)
         * [Keyboard & Input events](#keyboard--input-events)
-        * []()
+        * [Event Bubbling & Event delegation](#keyboard--input-events)
 * [Variables](#variables)
 * [Data Types](#data-types)
     * [Math](#math-)
@@ -57,6 +57,7 @@
     * [Accesing DOM with jQuery](#accesing-dom-with-jquery)
     * [Methods](#methods)
     * [Event Listening with jQuery](#event-listening-with-jquery)
+* [local & session storage](#local--session-storage)
 * [Needs futher clarification](#needs-futher-clarification)
 * [Source of the materials](#source-of-the-materials)
     
@@ -497,12 +498,9 @@ Input event: anything that happens in the input. any of the above. <br>
 change
 
 #### Event Bubbling & Event delegation
+
 **Bubbling**<br>
 Bubble up, to the parents, of events in the DOM.<br>
-
-```javascript
-
-```
 
 **Event Delegation** <br>
 the listener it is on the parent element. <br>
@@ -1981,12 +1979,13 @@ sessionStorage.setItem("name", "Carlos");
 * Ternary Operators
 * block scope
 * difference between var, let and const in scope
+* Event bubbling and event delegation
 * Hoisting 
 * Inline function expressions
 * event delegation in javascript
 
 ## Source of the materials:
-* MDN
+* [MDN](https://developer.mozilla.org/en-US/#)
 * Udacity Google Challenge Scholarship: Front-End Web Dev 2017-2018
 * [Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model)
 * [learn.jquery.com](https://learn.jquery.com/events/event-delegation/)
