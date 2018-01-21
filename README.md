@@ -1772,10 +1772,17 @@ It is a function `10`<br>
 It is an object - not primitive value `10`<br>
 
 
-
-###**this** key word
+### **this** key word
 In global scope will reffer to the window. <br>
 inside of a function will reffer to the object inside the function. <br>
+
+
+### Prototypes
+Each object in js has a prototype, and prototype is an object itself. <br>
+all objects inherit their properties and methods from their prototype.<br>
+Object Literals: inherit from a prototype called *object.prototype*<br>
+objects not literal build by constructor: inherit from 
+
 
 
 
