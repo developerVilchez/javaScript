@@ -1675,6 +1675,72 @@ LastName : Smith<br>
 age : 25<br>
 
 
+## Object Oriented
+
+### The constructor
+Should start with a capital letter <br>
+Example:
+```javascript
+function Person(name, age, gender) {
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+const patricia = new Person("Patricia", 14, "female");
+const alberto = new Person("Alberto", 54, "male");
+
+console.log(patricia);
+console.log(alberto);
+```
+prints: <br>
+`Person {name: "Patricia", age: 14, gender: "female"}`<br>
+`Person {name: "Alberto", age: 54, gender: "male"}`<br>
+
+Example
+```javascript
+function Person(name, dob) {
+  this.name = name;
+  this.birthday = new Date(dob);
+}
+const patricia = new Person("Patricia", "03-07-2003");
+console.log(patricia);
+
+```
+prints: <br>
+`Person {name: "Patricia", birthday: Fri Mar 07 2003 00:00:00 GMT+0100 (Hora estándar romance)}`<br>
+
+**Method**<br>
+create a method in the constructor: <br>
+a method is a function inside of an object <br>
+
+Example
+```javascript
+function Person(name, dob) {
+  this.name = name;
+  this.birthday = new Date(dob);
+  this.calculateAge = function(){
+      const diff = Date.now() - this.birthday.getTime();
+      const ageDate = new Date(diff); 
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+}
+const patricia = new Person("Patricia", "03-07-2003");
+console.log(patricia.calculateAge());
+```
+prints: <br>
+`14`<br>
+
+
+
+###**this** key word
+In global scope will reffer to the window. <br>
+inside of a function will reffer to the object inside the function. <br>
+
+
+
+
+
+
 ## Dates & Time
 
 It is an object <br>
@@ -1970,6 +2036,8 @@ example:
 ```javascript
 sessionStorage.setItem("name", "Carlos");
 ```
+
+
 
 
 
