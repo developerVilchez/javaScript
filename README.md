@@ -1730,6 +1730,47 @@ console.log(patricia.calculateAge());
 prints: <br>
 `14`<br>
 
+#### Built In constructors
+not often use, no many resason to do so. <br>
+also slows down the execution, so better to use primitive. But it is good to know.<br>
+From Primitive data to a constructor: <br>
+strings:<br>
+```javascript
+const nameOne = "Tamara";
+const nameTwo = new String("Carolina");
+console.log(nameOne);
+console.log(nameTwo);
+```
+Print:<br>
+It is a string - primitive value `Tamara`<br>
+It is an object - not primitive value `String {"Carolina"}`<br>
+
+Numbers:<br>
+```javascript
+const numberOne = 12;
+const numberTwo = new Number(12);
+console.log(numberOne);
+console.log(numberTwo);
+```
+Print:<br>
+It is a number - primitive value `12`<br>
+It is an object - not primitive value `Number {12}`<br>
+
+Same happends with booleans, objects(both cases is object, one way it is simpler than the other 2 write) and arrays (both cases is an array, one way it is simpler than the other 2 write)<br>
+
+Functions:<br>
+```javascript
+const getSumOne = function(x,y){
+    return x + y;
+}
+const getSumTwo = new Function("x","y", "return 5 + 5");
+console.log(getSumOne(5,5));
+console.log(getSumTwo(5,5));
+```
+Print:<br>
+It is a function `10`<br>
+It is an object - not primitive value `10`<br>
+
 
 
 ###**this** key word
