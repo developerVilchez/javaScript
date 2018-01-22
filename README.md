@@ -52,6 +52,11 @@
     * [Array Loops](#array-loops)
     * [Arrays in Arrays](#arrays-in-arrays)
 * [Objects](#objects)
+* [Object Oriented](#object-oriented)
+    * [The constructor](#the-constructor)
+        * [Built In constructors](#built-in-constructors)
+    * [this key word](#this-key-word)
+    * [Prototypes](#prototypes)
 * [Dates & Time](#dates--time)
 * [jQuery](#jQuery)
     * [Accesing DOM with jQuery](#accesing-dom-with-jquery)
@@ -1826,6 +1831,59 @@ prints: <br>
 `María Smith`<br>
 `Juan Smith`<br>
 
+#### Prototypal inheritance
+
+```javascript
+//Person constructor:
+function Person(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+// Prototype method : greeting
+    Person.prototype.greeting = function(){
+        return `Hello ${this.firstName} ${this.lastName}`;
+    }
+const personOne = new Person("Carla", "Pascual");
+console.log(personOne.greeting());
+
+```
+Returns: <br>
+`Hello Carla Pascual` <br>
+
+```javascript
+//Person constructor:
+function Person(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+// Prototype method : greeting
+    Person.prototype.greeting = function(){
+        return `Hello ${this.firstName} ${this.lastName}`;
+    }
+
+//Customer constructor:
+function Customer (firstName, lastName, phone, membership){
+    //"call" allows us to call another function on the current context:
+    Person.call(this, firstName, lastName);
+    this.phone = phone;
+    this.membership = membership;
+}
+
+//Inherit the person prototype methods:
+//without this greeting will not work for Customer
+Customer.prototype = Object.create(Person.prototype);
+
+//Make customer.prototype return Customer()
+Customer.prototype.constructor = Customer;
+
+//create a customer:
+const customerOne = new Customer("Luis", "Ruiz", "6555655655", "Standard");
+console.log(customerOne);
+console.log(customerOne.greeting());
+```
+Returns: <br>
+`Customer {firstName: "Luis", lastName: "Ruiz", phone: "6555655655", membership: "Standard"}` <br>
+`Hello Luis Ruiz`<br>
 
 
 
@@ -2141,6 +2199,9 @@ sessionStorage.setItem("name", "Carlos");
 * Inline function expressions
 * event delegation in javascript
 * Prototypes
+* this key word
+* Reserve words for variables
+* regular expressions
 
 ## Source of the materials:
 * [MDN](https://developer.mozilla.org/en-US/#)
