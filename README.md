@@ -1781,9 +1781,50 @@ inside of a function will reffer to the object inside the function. <br>
 Each object in js has a prototype, and prototype is an object itself. <br>
 all objects inherit their properties and methods from their prototype.<br>
 Object Literals: inherit from a prototype called *object.prototype*<br>
-objects not literal build by constructor: inherit from 
+objects not literal but build by constructor: inherit from *Person.prototype* <br>
 
+Example
+```javascript
+function Person(name, lastName, dob) {
+  //the properties
+  this.name = name;
+  this.lastName = lastName;
+  this.birthday = new Date(dob);
+}
+//Calculate Age:
+//this is now inside the prototype
+Person.prototype.calculateAge = function(){
+      const diff = Date.now() - this.birthday.getTime();
+      const ageDate = new Date(diff); 
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
 
+//Get Full Name:
+//this is now inside the prototype
+Person.prototype.getFullName = function(){
+    return `${this.name} ${this.lastName}`;
+}
+
+//Change Name:
+//this is now inside the prototype
+Person.prototype.getChangeName = function(NewName){
+    this.name = NewName;
+}
+
+const john = new Person("John", "Smith", "10-10-1988");
+const maría = new Person("María", "Smith", "11-12-1978");
+
+console.log(john.calculateAge());
+console.log(maría.getFullName());
+
+john.getChangeName("Juan");
+console.log(john.getFullName());
+
+```
+prints: <br>
+`27`<br>
+`María Smith`<br>
+`Juan Smith`<br>
 
 
 
@@ -2099,6 +2140,7 @@ sessionStorage.setItem("name", "Carlos");
 * Hoisting 
 * Inline function expressions
 * event delegation in javascript
+* Prototypes
 
 ## Source of the materials:
 * [MDN](https://developer.mozilla.org/en-US/#)
