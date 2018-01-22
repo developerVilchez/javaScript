@@ -1680,7 +1680,7 @@ LastName : Smith<br>
 age : 25<br>
 
 
-## Object Oriented
+## Object Oriented ES5
 
 ### The constructor
 Should start with a capital letter <br>
@@ -1885,7 +1885,116 @@ Returns: <br>
 `Customer {firstName: "Luis", lastName: "Ruiz", phone: "6555655655", membership: "Standard"}` <br>
 `Hello Luis Ruiz`<br>
 
+#### Object.create
+Create prototypes <br>
+An alternative way create objects using this method<br> 
+```javascript
+const personPrototypes = {
+    greeting: function(){
+        return `Hello ${this.firstName} ${this.lastName}!`
+    },
+    getsMarried: function(newLastName) {
+        this.lastName = newLastName;
+    }
+}
+const mary = Object.create(personPrototypes);
+mary.firstName = "Mary";
+mary.lastName = "Martín";
+mary.age = 25;
 
+console.log(mary);
+console.log(mary.greeting());
+mary.getsMarried("López");
+console.log(mary.greeting());
+
+//another posible sintax to use and create a new person:
+const roberto = Object.create(personPrototypes, {
+    firstName : {value: "Roberto"},
+    lastName : {value: "Guerrero"},
+    age : {value: 35}
+});
+console.log(roberto);
+console.log(roberto.greeting());
+```
+Returns: <br>
+`{firstName: "Mary", lastName: "Martín", age: 25}` <br>
+`Hello Mary Martín!` <br>
+`Hello Mary López!` <br>
+`{firstName: "Roberto", lastName: "Guerrero", age: 35}` <br>
+`Hello Roberto Guerrero!` <br>
+
+## Object Oriented ES6
+
+### ES6 Classes
+convenience/sugar sintax <br>
+changes the way we write not the way it works bellow in the engine<br>
+
+```javascript
+class Person {
+    constructor(firstName, lastName, dob){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = new Date(dob);
+    }
+    greeting(){
+        return `Hello ${this.firstName} ${this.lastName}!`;
+    }
+    calculateAge(){
+        const diff = Date.now() - this.birthday.getTime();
+        const ageDate = new Date(diff);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+    getsMarried(newLastName) {
+        this.lastName = newLastName;
+    }
+}
+
+const mary = new Person("Mary", "Colt", "06-06-1955");
+
+console.log(mary);
+console.log(mary.greeting());
+console.log(mary.calculateAge());
+mary.getsMarried("Pop");
+console.log(mary.greeting());
+```
+Returns: <br>
+`Person {firstName: "Mary", lastName: "Colt", birthday: Mon Jun 06 1955 00:00:00 GMT+0200 (Hora de verano romance)}`<br>
+`Hello Mary Colt!`<br>
+`62`<br>
+`Hello Mary Pop!`<br>
+
+#### ES6 subClasses - inheritances
+
+```javascript
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    greeting(){
+        return `Hello ${this.firstName} ${this.lastName}!`;
+    }
+}
+//customer the class we are creating
+//Person the class we are extending, it will become a subclass of Person
+class Customer extends Person {
+    constructor(firstName, lastName, phone, membership){
+       //calls the parent class constructor
+       super(firstName, lastName); 
+       this.phone = phone;
+       this.membership = membership;
+    }
+}
+//create a customer:
+const luis = new Customer("Luis", "Ruiz", "6555655655", "Standard");
+
+console.log(luis);
+console.log(luis.greeting());
+
+```
+Returns: <br>
+`Customer {firstName: "Luis", lastName: "Ruiz", phone: "6555655655", membership: "Standard"}`<br>
+`Hello Luis Ruiz!`<br>
 
 
 ## Dates & Time
