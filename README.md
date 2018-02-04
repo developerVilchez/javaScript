@@ -58,11 +58,14 @@
     * [this key word](#this-key-word)
     * [Prototypes](#prototypes)
 * [Dates & Time](#dates--time)
+* [local & session storage](#local--session-storage)
+* [Asynchronous Programming](#asynchronous-programming)
+    * [AJAX](#ajax)
 * [jQuery](#jQuery)
     * [Accesing DOM with jQuery](#accesing-dom-with-jquery)
     * [Methods](#methods)
     * [Event Listening with jQuery](#event-listening-with-jquery)
-* [local & session storage](#local--session-storage)
+
 * [Needs futher clarification](#needs-futher-clarification)
 * [Source of the materials](#source-of-the-materials)
     
@@ -2045,6 +2048,66 @@ anniversarie.setMilliseconds(22);
 
 console.log(anniversarie);
 ```
+
+## local & session storage
+**local storage**
+will stay until clear manually. <br>
+to see: browser dev. tools > application > local storage <br>
+add in the console:<br>
+example:
+```javascript
+localStorage.setItem("name", "Marta");
+```
+remove from storage: <br>
+```javascript
+localStorage.removeItem("name");
+```
+get value from storage: <br>
+```javascript
+const name = localStorage.getItem("name");
+console.log(name);
+```
+clear local storage: <br>
+```javascript
+localStorage.clear();
+```
+add task to local storage: <br>
+```javascript
+document.querySelector("form").addEventListener("submit", function(e){
+    //get the input value
+    const inputContent = document.getElementById("task").value;
+    //JSON & If statement neccesary to stored more than one task. otherwhise will only be stored one at the time.
+    let tasks;
+
+    if(localStorage.getItem("tasks") === null){
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem("tasks"));
+    }
+    task.push(inputContent);
+
+    //add the value to the local storage
+    localStorage.setItem("tasks", JSON.stringify(inputContent));
+    alert("Task saved!");
+    e.preventDefault();
+});
+//to print the list of tasks stored locally
+const tasks = JSON.parse(localSotage.getItem("tasks"));
+    tasks.forEach(function(task){
+        console.log(tasks);
+});
+```
+
+**sesion storage**
+will be clear when browser it is close.<br>
+to see: browser dev. tools > application > session storage <br>
+add in the console:<br>
+example:
+```javascript
+sessionStorage.setItem("name", "Carlos");
+```
+
+
 ## Asynchronous Programming
 
 ### AJAX
@@ -2068,6 +2131,7 @@ There is other methods to use to make request: <br>
 + Node HTTP
 + And more.
 
+example with plain texts needs link!!!!
 
 
 
@@ -2261,64 +2325,6 @@ adding a third parameter between the event and the function
 example:
 ```javascript
 $( '.container' ).on( 'click', 'article', function() { … });
-```
-
-## local & session storage
-**local storage**
-will stay until clear manually. <br>
-to see: browser dev. tools > application > local storage <br>
-add in the console:<br>
-example:
-```javascript
-localStorage.setItem("name", "Marta");
-```
-remove from storage: <br>
-```javascript
-localStorage.removeItem("name");
-```
-get value from storage: <br>
-```javascript
-const name = localStorage.getItem("name");
-console.log(name);
-```
-clear local storage: <br>
-```javascript
-localStorage.clear();
-```
-add task to local storage: <br>
-```javascript
-document.querySelector("form").addEventListener("submit", function(e){
-    //get the input value
-    const inputContent = document.getElementById("task").value;
-    //JSON & If statement neccesary to stored more than one task. otherwhise will only be stored one at the time.
-    let tasks;
-
-    if(localStorage.getItem("tasks") === null){
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem("tasks"));
-    }
-    task.push(inputContent);
-
-    //add the value to the local storage
-    localStorage.setItem("tasks", JSON.stringify(inputContent));
-    alert("Task saved!");
-    e.preventDefault();
-});
-//to print the list of tasks stored locally
-const tasks = JSON.parse(localSotage.getItem("tasks"));
-    tasks.forEach(function(task){
-        console.log(tasks);
-});
-```
-
-**sesion storage**
-will be clear when browser it is close.<br>
-to see: browser dev. tools > application > session storage <br>
-add in the console:<br>
-example:
-```javascript
-sessionStorage.setItem("name", "Carlos");
 ```
 
 
