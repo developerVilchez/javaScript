@@ -2045,6 +2045,34 @@ anniversarie.setMilliseconds(22);
 
 console.log(anniversarie);
 ```
+## Asynchronous Programming
+
+### AJAX
+Stands for: **Asynchronous JavaScript And XML** <br>
+Consist on a set of web technologies that sends and recieve data asynchronously <br>
+It does that behind the scenes without having to reload the entire website-page, makes it more interactive and faster <br>
+XML has mostly being replace by JSON, even can be plain text<br>
+to work with async code:<br> 
++ callbacks
++ promises
++ async/await
+**XHR**<br>
+Stands for: **XmlHttpRequest** <br>
+It is a core technology in AJAX<br>
+Provided by the browser, js enviroment, all browser have this API<br>
+mostly deal wit JSON data <br>
+There is other methods to use to make request: <br>
++ Fetch API (part of js)
++ External libraries: Axios and others.
++ jQuery (not recommended)
++ Node HTTP
++ And more.
+
+
+
+
+
+
 
 
 ## jQuery
