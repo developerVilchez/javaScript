@@ -2114,7 +2114,7 @@ sessionStorage.setItem("name", "Carlos");
 Stands for: **Asynchronous JavaScript And XML** <br>
 Consist on a set of web technologies that sends and recieve data asynchronously <br>
 It does that behind the scenes without having to reload the entire website-page, makes it more interactive and faster <br>
-XML has mostly being replace by JSON, even can be plain text<br>
+XML has mostly being replace by JSON(javaScript Object Notation), even can be plain text<br>
 to work with async code:<br> 
 + callbacks
 + promises
@@ -2131,7 +2131,7 @@ There is other methods to use to make request: <br>
 + Node HTTP
 + And more.
 
-example with plain texts needs link!!!!
+[example XHR on plain text] (https://github.com/elena-in-code/XHR-with-text)
 
 
 
